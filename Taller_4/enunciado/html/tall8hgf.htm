@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Operaciones lógicas</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall8hgf.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="1i8nh_"></a>Operaciones lógicas</h1>
+
+<p>Imagen de trabajo: <a href="tall4l10.htm"><b>muscle.png</b></a>
+; <a href="tall6smw.htm"><b>spot.png</b></a></p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm46.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Utilizando dos módulos ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm47.gif" alt="" border=
+"0"></a>, cargue las imágenes de trabajo y visualícelas<a href=
+"tall9hgl.htm"><img src="../images/bm48.gif" alt="" border=
+"0"></a>. Observe los niveles de gris de cada parte de la imagen
+<b>spot.png</b> (el <a href="tall8xmg.htm">nivel de gris</a>
+correspondiente al <a href="tall3xb3.htm">pixel</a> apuntado por el
+cursor, es mostrado en la parte superior de la pantalla del
+View2D).</p>
+
+<p>3- Cargue un módulo Arithmetic2<a href="tall2fub.htm"><img src=
+"../images/bm49.gif" alt="" border="0"></a>. Conecte las salidas de
+cada uno de los módulos ImageLoad a las entradas de Arithmetic2.
+Efectúe las operaciones OR, AND y XOR entre la imagen
+<b>muscle.png</b> y la imagen <b>spot.png</b>. Conclusión?
+Visualice los resultados<a href="tall9hgl.htm"><img src=
+"../images/bm50.gif" alt="" border="0"></a>.</p>
+
+<p>4- Invierta el orden de conexión de las imágenes en Arithmetic2.
+Efectúe las operaciones OR, AND y XOR. Conclusión? Visualice los
+resultados<a href="tall9hgl.htm"><img src="../images/bm51.gif" alt=
+"" border="0"></a>.</p>
+
+<p>5- Aplique la operación NOT sobre la imagen <b>muscle.png</b>.
+La operación NOT puede realizarse a través de la operación XOR.
+Para esto se utiliza una imagen constante de valor máximo (255) y
+se efectúa la operación XOR con la imagen original (NOT = 255 XOR
+I). Utilizando el módulo de generación de imágenes
+constantes<a href="tall15yo.htm"><img src="../images/bm52.gif" alt=
+"" border="0"></a> y el módulo Arithmetic2<a href=
+"tall2fub.htm"><img src="../images/bm53.gif" alt="" border=
+"0"></a>, aplique la operación NOT sobre la imagen
+<b>muscle.png</b>. Explique el resultado. Visualice<a href=
+"tall9hgl.htm"><img src="../images/bm54.gif" alt="" border=
+"0"></a>.</p>
+
+<p>6- Utilizando el módulo de generación de imágenes constantes,
+ponga en cero, en la imagen <b>muscle.png</b>, los 6 bits menos
+significativos de la zona marcada por <b>spot.png</b> (blanca), sin
+afectar el resto de la imagen. Explique cómo hacerlo. Verifique
+que, en la imagen resultado, la zona marcada solo toma los cuatro
+valores: 192, 128, 64 y 0.</p>
+
+<p>7- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm55.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm56.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>
