@@ -4,11 +4,349 @@ network  {
 }
 module View2D {
   internal  {
+    frame = "-275 1037 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1350 328 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D21
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 127.5
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module Scale {
+  internal  {
+    frame = "-467 1061 72 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "671 414 256 354"
+        sizeHint = "256 354"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Scale7
+    inputMin = 0
+    inputMax = 286
+    updateMode = AutoUpdateMinMaxOn
+    useTrueRange = TRUE
+    typeSelect = UInt8
+    outputMin = 0
+    outputMax = 255
+  }
+}
+module View2D {
+  internal  {
+    frame = "253 1125 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1437 263 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D20
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 121.125038146973
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module Scale {
+  internal  {
+    frame = "173 1213 72 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "671 414 256 354"
+        sizeHint = "256 354"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Scale6
+    inputMin = 0
+    inputMax = 302
+    updateMode = AutoUpdateMinMaxOn
+    useTrueRange = TRUE
+    typeSelect = UInt8
+    outputMin = 0
+    outputMax = 255
+  }
+}
+module HistogramEqualization {
+  internal  {
+    frame = "33 1349 160 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = HistogramEqualization2
+    numBins = 100
+    isFloatImage = FALSE
+    shouldOnlyNormalize = FALSE
+  }
+}
+module View2D {
+  internal  {
+    frame = "245 1293 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "518 368 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D19
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 76.5
+    lutWidth = 153
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "85 1437 104 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "601 485 397 97"
+        sizeHint = "397 97"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic24
+    function = Add
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Arithmetic1 {
+  internal  {
+    frame = "293 1485 120 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "642 584 318 66"
+        sizeHint = "314 66"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic15
+    function = Multiply
+    constant = 0.6
+  }
+}
+module View2D {
+  internal  {
+    frame = "45 1253 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1209 503 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D18
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 6152.54052734375
+    lutWidth = 32022.41015625
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module View2D {
+  internal  {
     frame = "-635 1109 120 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1027 494 400 400"
+        geometry = "1348 403 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -44,8 +382,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 110.15983581543
-    lutWidth = 408
+    lutCenter = 108.120140075684
+    lutWidth = 323.339965820312
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -101,7 +439,7 @@ module HessianFilter {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "577 394 444 503"
+        geometry = "577 265 444 503"
         sizeHint = "444 503"
         wasOpen = no
       }
@@ -181,7 +519,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "530 395 400 400"
+        geometry = "530 368 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -281,7 +619,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "518 449 400 400"
+        geometry = "518 368 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -372,7 +710,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "518 421 400 400"
+        geometry = "518 368 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -408,8 +746,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 85.297492980957
-    lutWidth = 51.6374053955078
+    lutCenter = 76.5
+    lutWidth = 153
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -432,7 +770,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1027 466 400 400"
+        geometry = "1555 241 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -468,8 +806,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 196.860046386719
-    lutWidth = 183.600036621094
+    lutCenter = 229.500244140625
+    lutWidth = 188.700088500977
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -532,7 +870,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "518 337 400 400"
+        geometry = "518 362 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -569,7 +907,7 @@ module View2D {
     useShaders = TRUE
     useManagedInteraction = FALSE
     lutCenter = 0
-    lutWidth = 39320.3984375
+    lutWidth = 153
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -592,7 +930,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "518 337 400 400"
+        geometry = "1592 221 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -628,8 +966,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = -70.3787612915039
-    lutWidth = 1286.20031738281
+    lutCenter = 127.5
+    lutWidth = 408
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -692,7 +1030,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "599 473 400 400"
+        geometry = "599 368 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -728,8 +1066,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = -6553.3935546875
-    lutWidth = 4751.2119140625
+    lutCenter = 3440.53588867188
+    lutWidth = 19332.53125
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -785,7 +1123,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "530 339 400 400"
+        geometry = "530 364 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -821,8 +1159,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 139.337493896484
-    lutWidth = 3.1875
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -845,7 +1183,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "599 473 400 400"
+        geometry = "1387 267 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -901,11 +1239,11 @@ module View2D {
 }
 module Scale {
   internal  {
-    frame = "-419 605 72 56"
+    frame = "-595 741 72 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "671 524 256 354"
+        geometry = "671 414 256 354"
         sizeHint = "256 354"
         wasOpen = no
       }
@@ -924,11 +1262,11 @@ module Scale {
 }
 module HessianFilter {
   internal  {
-    frame = "-175 693 112 56"
+    frame = "-319 573 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "577 394 444 503"
+        geometry = "577 265 444 503"
         sizeHint = "444 503"
         wasOpen = no
       }
@@ -1105,7 +1443,7 @@ module SynchroView2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "605 234 804 400"
+        geometry = "220 259 804 400"
         sizeHint = "804 400"
         wasOpen = no
       }
@@ -1284,7 +1622,7 @@ module SynchroView2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "191 236 804 400"
+        geometry = "191 261 804 400"
         sizeHint = "804 400"
         wasOpen = no
       }
@@ -1377,7 +1715,7 @@ module SynchroView2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "202 382 804 400"
+        geometry = "1399 332 804 400"
         sizeHint = "804 400"
         wasOpen = no
       }
@@ -1408,7 +1746,7 @@ module SynchroView2D {
     borderOn = FALSE
     drawCurrentPos = FALSE
     showCurrentPos = FALSE
-    worldPosition = "-8.59580993652344 14.0424690246582 85.9715423583984"
+    worldPosition = "65.2165374755859 1.59620785713196 0.5"
     background = "0 0 0"
   }
 }
@@ -1418,7 +1756,7 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "633 321 332 369"
+        geometry = "633 371 332 369"
         sizeHint = "332 369"
         wasOpen = no
       }
@@ -1451,7 +1789,7 @@ module HessianFilter {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "577 366 444 503"
+        geometry = "577 265 444 503"
         sizeHint = "444 503"
         wasOpen = no
       }
@@ -1461,13 +1799,13 @@ module HessianFilter {
     instanceName = HessianFilter2
     edgeMode = PadSrcClamp
     filterSelect = LoG
-    xExtension = 1
-    yExtension = 1
-    zExtension = 1
+    xExtension = 2
+    yExtension = 2
+    zExtension = 2
     isotropKernel = TRUE
     isotropKernelSize = 1
-    sigma = 0.70546734
-    gaussRange = 0.5
+    sigma = 0.5
+    gaussRange = 2
     autoApply = FALSE
     minMaxAdjust = FALSE
     minValue = 0
@@ -1516,8 +1854,8 @@ module Scale {
   }
   fields  {
     instanceName = Scale2
-    inputMin = -38
-    inputMax = 33
+    inputMin = -366
+    inputMax = 244
     updateMode = AutoUpdateMinMaxOn
     useTrueRange = TRUE
     typeSelect = Int8
@@ -1591,7 +1929,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1019 440 400 400"
+        geometry = "1406 372 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1627,8 +1965,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 139.612350463867
-    lutWidth = 81.5999984741211
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1687,7 +2025,7 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 6553.4130859375
+    lutCenter = 0
     lutWidth = 65534
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
@@ -1711,7 +2049,7 @@ module Scale {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "671 440 256 354"
+        geometry = "671 414 256 354"
         sizeHint = "256 354"
         wasOpen = no
       }
@@ -1734,7 +2072,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "599 333 400 400"
+        geometry = "1294 243 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1770,8 +2108,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 2457.53271484375
-    lutWidth = 10157.7685546875
+    lutCenter = 1802.1865234375
+    lutWidth = 36699.05078125
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1794,7 +2132,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "599 473 400 400"
+        geometry = "1767 234 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1830,8 +2168,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = -0.015472412109375
-    lutWidth = 1310.68017578125
+    lutCenter = 983.013122558594
+    lutWidth = 3931.998046875
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1854,7 +2192,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1019 356 400 400"
+        geometry = "1357 234 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1890,8 +2228,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 113.474952697754
-    lutWidth = 52.9125175476074
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1914,7 +2252,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "599 305 400 400"
+        geometry = "1250 214 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1982,8 +2320,8 @@ module Scale {
   }
   fields  {
     instanceName = Scale
-    inputMin = -260
-    inputMax = 362
+    inputMin = -946
+    inputMax = 837
     updateMode = AutoUpdateMinMaxOn
     useTrueRange = TRUE
     typeSelect = Int8
@@ -1997,7 +2335,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "599 389 400 400"
+        geometry = "1312 296 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -2033,8 +2371,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 115.387519836426
-    lutWidth = 178.500152587891
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -2057,7 +2395,7 @@ module HessianFilter {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "577 394 444 503"
+        geometry = "1499 264 444 503"
         sizeHint = "444 503"
         wasOpen = no
       }
@@ -2114,7 +2452,7 @@ module HessianFilter {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "577 366 444 503"
+        geometry = "1541 174 444 503"
         sizeHint = "444 503"
         wasOpen = no
       }
@@ -2124,13 +2462,13 @@ module HessianFilter {
     instanceName = HessianFilter
     edgeMode = PadSrcClamp
     filterSelect = LoG
-    xExtension = 1
-    yExtension = 1
+    xExtension = 2
+    yExtension = 2
     zExtension = 1
-    isotropKernel = TRUE
+    isotropKernel = FALSE
     isotropKernelSize = 1
     sigma = 0.5
-    gaussRange = 1
+    gaussRange = 2.0000002
     autoApply = FALSE
     minMaxAdjust = FALSE
     minValue = 0
@@ -2171,7 +2509,7 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "633 293 332 369"
+        geometry = "1211 404 332 369"
         sizeHint = "332 369"
         wasOpen = no
       }
@@ -2199,26 +2537,36 @@ module ImageLoad {
   }
 }
 connections  {
+  View2D21.inImage = Scale7.output0
+  Scale7.input0 = HistogramEqualization.output0
+  View2D20.inImage = Scale6.output0
+  Scale6.input0 = HistogramEqualization2.output0
+  HistogramEqualization2.input0 = Arithmetic24.output0
+  View2D19.inImage = Arithmetic15.output0
+  Arithmetic24.input0 = HessianFilter4.output0
+  Arithmetic24.input1 = Arithmetic15.output0
+  Arithmetic15.input0 = HistogramEqualization1.output0
+  View2D18.inImage = HistogramEqualization2.output0
   View2D16.inImage = HistogramEqualization.output0
   HessianFilter4.input0 = HistogramEqualization1.output0
   Scale5.input0 = HessianFilter4.output0
   View2D17.inImage = Scale5.output0
-  Arithmetic14.input0 = Scale5.output0
-  Arithmetic23.input0 = HistogramEqualization1.output0
+  Arithmetic14.input0 = HistogramEqualization1.output0
+  Arithmetic23.input0 = Scale5.output0
   Arithmetic23.input1 = Arithmetic14.output0
   View2D15.inImage = Arithmetic14.output0
   HistogramEqualization1.input0 = ImageLoad3.output0
   HistogramEqualization.input0 = Arithmetic23.output0
   View2D14.inImage = Arithmetic13.output0
   View2D13.inImage = Arithmetic22.output0
-  Arithmetic22.input0 = ImageLoad2.output0
+  Arithmetic22.input0 = Scale4.output0
   Arithmetic22.input1 = Arithmetic13.output0
-  Arithmetic13.input0 = Scale4.output0
+  Arithmetic13.input0 = ImageLoad2.output0
   View2D12.inImage = Arithmetic12.output0
   View2D11.inImage = Arithmetic21.output0
-  Arithmetic21.input0 = ImageLoad2.output0
+  Arithmetic21.input0 = HessianFilter3.output0
   Arithmetic21.input1 = Arithmetic12.output0
-  Arithmetic12.input0 = HessianFilter3.output0
+  Arithmetic12.input0 = ImageLoad2.output0
   View2D10.inImage = HessianFilter3.output0
   View2D9.inImage = Scale4.output0
   View2D8.inImage = ImageLoad2.output0
