@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Operador de Deriche</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall4lt4.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="2249zvh"></a>Operador de Canny</h1>
+
+<p>Imagen de trabajo: <a href=
+"tall7n6r.htm"><b>rondelle.png</b></a></p>
+
+<p>El algoritmo de Canny consiste en cuatro grandes pasos:</p>
+
+<p>- Obtención del gradiente: en este paso se calcula la magnitud y
+orientación del vector gradiente en cada píxel. La imagen es
+suavizada previamente con un filtro gaussiano. La intensidad de
+filtrado es determinado por la desviación estándar (sigma) de la
+función gaussiana.</p>
+
+<p>- Selección de los máximos locales del gradiente con el objetivo
+de que la imagen obtenida sea efectivamente una imagen de contornos
+con espesor de 1 pixel.</p>
+
+<p>- Umbralización por histéresis de los máximos locales del
+gradiente para evitar retener los valores máximos locales de baja
+amplitud (magnitud del gradiente).</p>
+
+<p>- Unión de los puntos de contorno similares para obtener
+contornos cerrados.</p>
+
+<p>Para mayores detalles sobre el método, consulte el documento
+AlgoritmodeCanny.pdf adjunto al taller en SICUA.</p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm211.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm212.gif" alt="" border=
+"0"></a>. Abra la imagen <b>rondelle.png</b>. Aplique el operador
+de Sobel (ver punto anterior), y describa el resultado (puede
+efectuar una calibración del histograma<a href=
+"tall24q0.htm"><img src="../images/bm213.gif" alt="" border=
+"0"></a> de la imagen obtenida para visualizar mejor el
+resultado).</p>
+
+<p>3- Aplique sobre la imagen original el operador de Canny<a href=
+"tall1x44.htm"><img src="../images/bm214.gif" alt="" border=
+"0"></a>, con los siguientes valores de parámetros: Varianza = 6
+(en x y en y); Error máximo = 0.001 (en x y en y); Umbral inferior
+= 0; Umbral superior = 1. Describa el resultado<i>.</i></p>
+
+<p><b>Ayuda</b>:</p>
+
+<p>Varianza = 6 indica que se va a filtrar considerablemente la
+imagen original.</p>
+
+<p>Umbral superior = 1 permite eliminar la mayoría de falsas
+detecciones de pequeña amplitud del gradiente.</p>
+
+<p>4- Disminuya la varianza a 1 (en x y y) y explique lo que
+sucede.</p>
+
+<p>5- Aumente el umbral superior a 5 y compare los resultados con
+los dos valores de sigma (6 y 1).</p>
+
+<p>6- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm215.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm216.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

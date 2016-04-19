@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Filtros lineales y detección de contornos</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall1g8e.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="1t2ww6n"></a>Filtros lineales de detección de contornos
+<a href="tall2t6e.htm"><img src="../images/bm173.gif" alt=""
+border="0"></a></h1>
+
+<p>Imagen de trabajo: <a href=
+"tall9bxy.htm"><b>objects.png</b></a></p>
+
+<p>La implementación de las máscaras de Sobel y de Prewitt es la
+siguiente:</p>
+
+<p>Máscara de Sobel:</p>
+
+<p><img src="../images/bm174.gif" alt="" border="0"> <img src=
+"../images/bm175.gif" alt="" border="0"></p>
+
+<p><img src="../images/bm176.gif" alt="" border="0">
+</p>
+
+<p>Máscara de Prewitt:</p>
+
+<p><img src="../images/bm177.gif" alt="" border="0"> <img src=
+"../images/bm178.gif" alt="" border="0"></p>
+
+<p><img src="../images/bm179.gif" alt="" border="0">
+</p>
+
+<p>Es importante notar que cada máscara de estos dos filtros
+efectúa un suavizado en la dirección perpendicular a la cual
+calcula la derivada parcial. Prewitt utiliza para esto un filtro
+promedio <img src="../images/bm180.gif" alt="" border="0">,
+mientras que Sobel utiliza un filtro gaussiano <img src=
+"../images/bm181.gif" alt="" border="0">.</p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm182.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm183.gif" alt="" border=
+"0"></a>. Abra la imagen <b>objects.png</b>. Conecte a esta imagen
+el módulo Scale<a href="tall392u.htm"><img src=
+"../images/bm184.gif" alt="" border="0"></a>. Transforme la imagen
+a Int32 conservando los mismos niveles de gris (0 y 255).</p>
+
+<p>3- <b>Operador de Sobel</b>: Seleccione el módulo
+vtkImageSobel2D<a href="tall8378.htm"><img src=
+"../images/bm185.gif" alt="" border="0"></a> y abra la red de
+ejemplo. Copie la rama izquierda de la red ejemplo (donde se
+encuentra el módulo vtkImageSobel2D). En lugar del módulo
+LocalImage, conecte a MLtoVTKImage el módulo Scale del punto
+anterior. Haga doble clic sobre el módulo
+vtkImageExtractComponents. En Components ingrese el valor 0. Esto
+permitirá calcular la componente Y del filtro de Sobel (cálculo del
+gradiente en la dirección Y). Visualice los resultados<a href=
+"tall9hgl.htm"><img src="../images/bm186.gif" alt="" border=
+"0"></a>.</p>
+
+<p>4- Duplique la red. Haga doble clic sobre el módulo
+vtkImageExtractComponents. En Components ingrese el valor 1. Esto
+permitirá calcular la componente X del filtro de Sobel (cálculo del
+gradiente en la dirección X). Visualice los resultados<a href=
+"tall9hgl.htm"><img src="../images/bm187.gif" alt="" border=
+"0"></a>.</p>
+
+<p>5- Utilizando los módulos Arithmetic1<a href=
+"tall9yt5.htm"><img src="../images/bm188.gif" alt="" border=
+"0"></a> y Arithmetic2<a href="tall2fub.htm"><img src=
+"../images/bm189.gif" alt="" border="0"></a>, calcule la norma
+(magnitud) del gradiente de acuerdo con la definición. Visualice el
+resultado<a href="tall9hgl.htm"><img src="../images/bm190.gif" alt=
+"" border="0"></a>.</p>
+
+<p>6- <b>Operador de Prewitt</b>: Añada un módulo
+KernelEditor<a href="tall67z3.htm"><img src="../images/bm191.gif"
+alt="" border="0"></a> y un módulo Convolution<a href=
+"tall9h4i.htm"><img src="../images/bm192.gif" alt="" border=
+"0"></a>.</p>
+
+<p>·Conecte el módulo Scale a la entrada del módulo
+Convolution.</p>
+
+<p>·Active la vista Parameter Connections Inspector<a href=
+"tall4unn.htm"><img src="../images/bm193.gif" alt="" border=
+"0"></a>.</p>
+
+<p>·En la sección Source Field seleccione en el primer combo box la
+opción KernelEditor y en el segundo combo box el campo Kernel. En
+la sección Destination Field seleccione en el primer combo box la
+opción Convolution y en el segundo combo box el campo
+externalKernel. Presione la flecha que apunta desde KernelEditor
+hacia Convolution (-&gt;). Con esta operación se están conectando
+los campos internos de cada módulo.</p>
+
+<p>·Haga doble clic en el módulo Convolution y en el parámetro Use,
+seleccione From Kernel Input. Esto permitirá utilizar un kernel
+externo para la convolución.</p>
+
+<p>·Haga doble clic en el módulo KernelEditor. Verifique que los
+parámetros de la sección Kernel Extents tienen los siguientes
+valores: KernelX = 3, KernelY = 3 y los demás campos en 1. Presione
+Apply. Esto generará una matriz (kernel) de 1’s en la parte
+inferior de esa ventana.</p>
+
+<p>·Edite las diferentes celdas de la matriz para armar el operador
+Prewitt que calcula el gradiente en la dirección x (<img src=
+"../images/bm194.gif" alt="" border="0">). Haga clic en Apply.</p>
+
+<p>·Visualice el resultado<a href="tall9hgl.htm"><img src=
+"../images/bm195.gif" alt="" border="0"></a>.</p>
+
+<p>·Duplique los módulos Convolution y KernelEditor y efectúe la
+misma operación para construir el operador Prewitt que calcula el
+gradiente en la dirección y (<img src="../images/bm196.gif" alt=""
+border="0">). Visualice el resultado<a href=
+"tall9hgl.htm"><img src="../images/bm197.gif" alt="" border=
+"0"></a>.</p>
+
+<p>·Utilizando los módulos Arithmetic1<a href=
+"tall9yt5.htm"><img src="../images/bm198.gif" alt="" border=
+"0"></a> y Arithmetic2 <a href="tall2fub.htm"><img src=
+"../images/bm199.gif" alt="" border="0"></a>, calcule la norma del
+gradiente de acuerdo con la definición. Visualice el
+resultado<a href="tall9hgl.htm"><img src="../images/bm200.gif" alt=
+"" border="0"></a>.</p>
+
+<p>·Describa cualitativamente cada una de estas tres imágenes
+(imagen del gradiente en x, imagen del gradiente en y e imagen de
+la norma del gradiente).</p>
+
+<p>7- Sustraiga<a href="tall2fub.htm"><img src=
+"../images/bm201.gif" alt="" border="0"></a> a la imagen de la
+norma de Prewitt, la imagen de la norma del gradiente calculada con
+el operador de Sobel.</p>
+
+<p>6- Qué diferencia visual hay entre el operador de Sobel y el de
+Prewitt?</p>
+
+<p>Para explicar esta diferencia, calcule numéricamente las
+respuestas (<img src="../images/bm202.gif" alt="" border=
+"0">,<img src="../images/bm203.gif" alt="" border="0">y<img src=
+"../images/bm204.gif" alt="" border="0">) de cada uno de los dos
+filtros en los siguientes casos:</p>
+
+<p>Frontera horizontal entre negro y blanco:</p>
+
+<p><img src="../images/bm205.gif" alt="" border="0">
+</p>
+
+<p>Frontera vertical entre negro y blanco:</p>
+
+<p><img src="../images/bm206.gif" alt="" border="0">
+</p>
+
+<p>Frontera oblicua entre negro y blanco:</p>
+
+<p><img src="../images/bm207.gif" alt="" border="0">
+</p>
+
+<p>Cuando la máscara se aleja de la frontera oblicua (máscara
+centrada en [0]):</p>
+
+<p><img src="../images/bm208.gif" alt="" border="0">
+</p>
+
+<p>7- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm209.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm210.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

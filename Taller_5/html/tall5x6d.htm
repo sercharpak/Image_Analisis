@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Umbralización y otras transformaciones del
+histograma</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall5x6d.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="2ufm25"></a>Umbralización simple<a href=
+"tall3h85.htm"><img src="../images/bm149.gif" alt="" border=
+"0"></a></h1>
+
+<p>Imagen de trabajo: <a href=
+"tall4l10.htm"><b>muscle.png</b></a></p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm150.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm151.gif" alt="" border=
+"0"></a>. Abra la imagen <b>muscle.png</b> y visualícela<a href=
+"tall9hgl.htm"><img src="../images/bm152.gif" alt="" border=
+"0"></a>.</p>
+
+<p>3- Visualice su histograma<a href="tall4p9e.htm"><img src=
+"../images/bm153.gif" alt="" border="0"></a> y escoja un valor S de
+<a href="tall8xmg.htm">nivel de gris</a> que permita separar
+aproximadamente las fibras oscuras del resto de la imagen. Cuál es
+este valor?</p>
+
+<p>4- Efectúe una calibración del histograma (ver primer punto de
+este taller) entre los valores S y S+1 de la imagen. Visualice la
+imagen resultado<a href="tall9hgl.htm"><img src=
+"../images/bm154.gif" alt="" border="0"></a> y su
+histograma<a href="tall4p9e.htm"><img src="../images/bm155.gif"
+alt="" border="0"></a>. Conclusión?</p>
+
+<p>5- Repita la misma operación utilizando el módulo de
+umbralización simple<a href="tall0m7k.htm"><img src=
+"../images/bm156.gif" alt="" border="0"></a>, con el umbral S.
+Conclusión?</p>
+
+<p>6- Qué resultado dan los métodos de umbralización automática
+basados sobre la varianza (con 1<a href="tall3bav.htm"><img src=
+"../images/bm157.gif" alt="" border="0"></a> y 2<a href=
+"tall3baw.htm"><img src="../images/bm158.gif" alt="" border=
+"0"></a> umbrales)? Visualice las imágenes resultado<a href=
+"tall9hgl.htm"><img src="../images/bm159.gif" alt="" border=
+"0"></a> y sus histogramas<a href="tall4p9e.htm"><img src=
+"../images/bm160.gif" alt="" border="0"></a>.</p>
+
+<p><b>Nota:</b>
+</p>
+
+<p>- Los umbrales son determinados automáticamente por el programa
+basados en la varianza de la imagen.</p>
+
+<p>- Para visualizar correctamente los resultados, debe modificar
+la dinámica de la imagen umbralizada, ya que la segmentación genera
+una imagen binaria (con niveles de gris 0 y 1) en el caso de la
+segmentación con 1 umbral y una imagen con 3 niveles de gris (0,1 y
+2) en el caso de la segmentación con 2 umbrales. Utilice un módulo
+Scale<a href="tall392u.htm"><img src="../images/bm161.gif" alt=""
+border="0"></a> para modificar los rangos de entrada y de salida.
+Sobre la imagen binaria, configure el rango de entrada (Input)
+entre 0 y 1 y el de salida (Output) entre 0 y 255. Sobre la imagen
+con 3 niveles de gris, configure el rango de entrada entre 0 y 2 y
+el de salida entre 0 y 255.</p>
+
+<p>6- Guarde la nueva red<a href="tall19di.htm"><img src=
+"../images/bm162.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm163.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>
