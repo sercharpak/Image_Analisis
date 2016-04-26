@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>(Untitled)</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall9xis.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name=".bse8t"></a><b>Menu:</b> <i>(<u>operación
+interactiva</u>)</i></h1>
+
+<p>Modules &gt;&gt; Visualization &gt;&gt; 2D Viewers &gt;&gt;
+View2D</p>
+
+<p>1.Conectar la imagen sobre la cual se va a seleccionar el
+componente conexo a la entrada de este View2D.</p>
+
+<p>2.Dar clic derecho sobre el View2D, abrir el menú View 2D
+Options y habilitar la opción Show Inventor Inputs.</p>
+
+<p>Modules &gt;&gt; Visualization &gt;&gt; Interaction &gt;&gt;
+SoView2DMarkerEditor.</p>
+
+<p>1.Conectar la salida <i>self</i> del SoView2DMarkerEditor con la
+entrada <i>inInvPreLUT</i> del View2D.</p>
+
+<p>2.Dar doble clic en el módulo y seleccionar en DrawingColor un
+color diferente a blanco. Esto permitirá ver el punto seleccionado
+dentro de un objeto.</p>
+
+<p>Modules &gt;&gt; Segmentation &gt;&gt; Region &gt;&gt;
+ConnectedComponents</p>
+
+<p>1.Conectar la imagen sobre la cual se va a seleccionar el
+componente conexo a la entrada de este módulo.</p>
+
+<p>2.Conectar la salida <i>outXMarkerList</i> del
+SoView2DMarkerEditor (cuadrada) a la segunda entrada (cuadrada) de
+ConnectedComponents.</p>
+
+<p>3.Conectar la salida <i>output1</i> de este módulo
+ConnectedComponents a un View2D (diferente al utilizado en el
+primer paso).</p>
+
+<p>4.Dar doble clic en el módulo ConnectedComponents presionar los
+botones <i>Update Analysis</i> y <i>Update Component Selection</i>
+para ver el resultado.</p>
+
+<p>5.Hacer click sobre el o los objetos binarios <b>blancos</b> que
+desea seleccionar en el primer View2D. Cada vez que seleccione un
+nuevo punto, repita el paso anterior (click en los botones
+<i>Update Analysis</i> y <i>Update Component Selection</i> del
+ConnectedComponents).</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

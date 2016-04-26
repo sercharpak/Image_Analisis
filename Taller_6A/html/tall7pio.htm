@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Operadores de dilatación y erosión</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall7pio.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="2a51xnp"></a>Operadores de dilatación<a href=
+"tall2trq.htm"><img src="../images/bm268.gif" alt="" border=
+"0"></a> y de erosión<a href="tall7ghh.htm"><img src=
+"../images/bm269.gif" alt="" border="0"></a></h1>
+
+<p>Imagen de trabajo: <a href=
+"tall1wqh.htm"><b>morpho.png</b></a></p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm270.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm271.gif" alt="" border=
+"0"></a>. Abra la imagen <b>morpho.png</b></p>
+
+<p>3- Haga una <a href="tall3h85.htm">umbralización</a><a href=
+"tall0m7k.htm"><img src="../images/bm272.gif" alt="" border=
+"0"></a> de esta imagen, para obtener objetos negros sobre fondo
+blanco (umbral alrededor de 115).</p>
+
+<p>Se desea eliminar los objetos de dimensión pequeña. Para hacer
+esto, se va a reducir el tamaño de todos los objetos, hasta que
+quede únicamente el más grande. Después se "inflará" de nuevo el
+objeto que quedó. Recuerde que la erosión reduce el tamaño de los
+<b>objetos claros</b> y que la dilatación aumenta su tamaño. En
+nuestro caso, los objetos son oscuros. Por consiguiente, para
+reducir su tamaño, es necesario dilatar el fondo claro.</p>
+
+<p>4- Sobre la imagen binaria efectúe una dilatación<a href=
+"tall36qw.htm"><img src="../images/bm273.gif" alt="" border=
+"0"></a> con una máscara cuadrada de 29x29<a href=
+"tall4y5w.htm"><img src="../images/bm274.gif" alt="" border=
+"0"></a>. Este proceso puede tardar un tiempo considerable. Qué
+obtiene como resultado?</p>
+
+<p>5- Sobre la imagen resultante, haga una erosión<a href=
+"tall5ae9.htm"><img src="../images/bm275.gif" alt="" border=
+"0"></a> con la misma máscara. Cómo es el objeto obtenido con
+respecto al original?</p>
+
+<p>6- Sobre la imagen resultado del punto anterior, haga una
+erosión con una máscara en cruz, de tamaño 11x11<a href=
+"tall4y5w.htm"><img src="../images/bm276.gif" alt="" border=
+"0"></a>. Para la generación de la máscara utilice el módulo
+KernelEditor<a href="tall67z3.htm"><img src="../images/bm277.gif"
+alt="" border="0"></a>. Utilice el Taller 4 como guía para la
+definición y conexión de la máscara.</p>
+
+<p><b>NOTA:</b> Las máscaras en cruz deben crearse generando una
+matriz de nxn (tamaño deseado) y colocando 1’ s en la cruz. Los
+demás elementos se deben dejar vacíos (SIN CEROS).</p>
+
+<p>7- Calcule el máximo<a href="tall3mnb.htm"><img src=
+"../images/bm278.gif" alt="" border="0"></a> entre esta última
+imagen y la imagen original umbralizada. Cómo es el resultado
+obtenido?</p>
+
+<p>8- Repita las operaciones 4 a 7, trabajando directamente con la
+imagen original no umbralizada (en niveles de gris).</p>
+
+<p>Cómo funcionan las operaciones de erosión y de dilatación en
+imágenes en niveles de gris?</p>
+
+<p>Cómo es el resultado obtenido sobre la imagen en niveles de
+gris, comparado con el resultado sobre la imagen binaria?</p>
+
+<p>9- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm279.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm280.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

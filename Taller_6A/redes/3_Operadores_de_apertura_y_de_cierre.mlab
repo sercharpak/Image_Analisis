@@ -1,0 +1,1001 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module View2D {
+  internal  {
+    frame = "1021 -123 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2086 360 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D6
+    inventorInputOn = TRUE
+    inventorOutputOn = TRUE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 0.514999985694885
+    lutWidth = 0.95250004529953
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module SoView2DOverlay {
+  internal  {
+    frame = "1261 13 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1355 355 492 407"
+        sizeHint = "492 407"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoView2DOverlay
+    interactionProviderID = ""
+    drawingOn = TRUE
+    editingOn = TRUE
+    fixZOn = TRUE
+    color = "1 1 1"
+    selectionTolerance = 4
+    needsValidVoxel = TRUE
+    button1 = IGNORED
+    button2 = IGNORED
+    button3 = IGNORED
+    shift = IGNORED
+    control = IGNORED
+    alt = IGNORED
+    wantsAllEvents = TRUE
+    wantsKeyEvents = TRUE
+    wantsMouseWheelEvents = FALSE
+    setEventHandled = FALSE
+    ignoreHandledEvents = FALSE
+    createNewMode = FALSE
+    renderOnSlab = TRUE
+    clipToSlice = TRUE
+    cursorShape = UNDEFINED_CURSOR
+    cacheTextures = TRUE
+    blendMode = BLEND_BLEND
+    overwriteCurrentTimePoint = FALSE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    inheritFilterMode = TRUE
+    lutPrecision = VIEW2D_LUT_AUTO
+    alphaFactor = 0.5
+    baseColor = "1 0 0"
+    useWorldCoords = FALSE
+    applyLut = TRUE
+    isCheckerTiling = FALSE
+    checkerTileSize = 2
+    areCheckerTilesInverted = FALSE
+  }
+}
+module SoGroup {
+  internal  {
+    frame = "1385 -107 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "1111 333 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoGroup
+  }
+}
+module View2D {
+  internal  {
+    frame = "581 -83 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1668 419 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D5
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 128
+    lutWidth = 258
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module ConnectedComponentsInfo {
+  internal  {
+    frame = "1437 173 184 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1089 297 493 331"
+        sizeHint = "493 331"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ConnectedComponentsInfo
+    updateMode = AutoUpdate
+    selectInfoClusterByVoxelPosition = "10 14 0"
+  }
+}
+module Threshold {
+  internal  {
+    frame = "617 453 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1176 349 307 313"
+        sizeHint = "271 313"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold1
+    threshold = 35
+    relativeThreshold = FALSE
+    comparisonOperator = Greater
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 255
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module ConnectedComponentsToImage {
+  internal  {
+    frame = "1005 117 216 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1112 530 370 144"
+        sizeHint = "370 144"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ConnectedComponentsToImage1
+    updateMode = AutoUpdate
+    writeToImageMode = FixedValues
+    clusterValue = 255
+    backgroundValue = 0
+  }
+}
+module FilterConnectedComponents {
+  internal  {
+    frame = "1017 221 192 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1344 583 370 213"
+        sizeHint = "370 213"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FilterConnectedComponents1
+    updateMode = AutoUpdate
+    minClusterSize = 0
+    maxClusterSize = -1
+    clusterSizeInterpretation = Voxels
+    shouldInvertSelection = FALSE
+    selectionMode = SelectedByCoordinates
+  }
+}
+module ComputeConnectedComponents {
+  internal  {
+    frame = "1001 333 208 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1311 568 460 274"
+        sizeHint = "408 274"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComputeConnectedComponents
+    updateMode = AutoUpdate
+    neighborhoodRelation = NBH_2D_8_XY
+    backgroundValue = 0
+    useBackgroundValue = TRUE
+    useMask = FALSE
+    clusterMode = IdenticalIntensities
+    similarityToleranceIntensities = 0
+    similarityToleranceVectors = 0.98
+  }
+}
+module SoView2DMarkerEditor {
+  internal  {
+    frame = "1217 389 160 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1421 191 701 712"
+        sizeHint = "675 712"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoView2DMarkerEditor
+    interactionProviderID = ""
+    drawingOn = TRUE
+    editingOn = TRUE
+    fixZOn = TRUE
+    color = "0 0 1"
+    selectionTolerance = 4
+    needsValidVoxel = TRUE
+    button1 = PRESSED
+    button2 = IGNORED
+    button3 = IGNORED
+    shift = IGNORED
+    control = IGNORED
+    alt = IGNORED
+    wantsAllEvents = FALSE
+    wantsKeyEvents = TRUE
+    wantsMouseWheelEvents = FALSE
+    setEventHandled = FALSE
+    ignoreHandledEvents = FALSE
+    createNewMode = FALSE
+    renderOnSlab = FALSE
+    clipToSlice = FALSE
+    cursorShape = UNDEFINED_CURSOR
+    depthVisibility = 1
+    snapToVoxel = TRUE
+    snapToSlice = TRUE
+    currentType = 0
+    deleteOnClick = FALSE
+    addOnClick = TRUE
+    alphaFactor = 1
+    minimumAlpha = 0.1
+    iconFile = $(MLAB_MeVisLab_Standard)/Modules/Resources/Images/markerIcons.tif
+    useIconFile = FALSE
+    iconIdx = 0
+    drawMarkerShapesWithLines = FALSE
+    selectingOn = TRUE
+    actOnReleaseOnly = FALSE
+    editorMode = EDIT_MARKER
+    colorMode = COLOR_BY_TYPE
+    textColorMode = COLOR_TEXT
+    textMode = TEXT_OFF
+    textPosition = TEXT_POSITION_RIGHT_BELOW
+    textColor = "1 1 1"
+    textShadow = TRUE
+    textFontSize = 12
+    showTextOnlyForSelectedMarker = FALSE
+    cutText = FALSE
+    maxNumberOfLines = 1
+    vectorArrow = VECTOR_END_ARROW
+    vectorLineWidth = 1
+    useAntiAlias = TRUE
+    useVectorLengthAsMarkerSize = FALSE
+    depthVectorDrawMode = DRAW_HIGHLIGHT_SLICE_SEGMENT
+    drawMode = DRAW_MARKER
+    highlightSelection = TRUE
+    selectiveDrawing = FALSE
+    selectionBoxesForCurrentOnly = FALSE
+    cooperative = FALSE
+    overwriteCurrentTimePoint = FALSE
+    newCurrentTimePoint = 0
+    depthVisibilityMode = DEPTH_IN_SLICES
+    listString = ""
+    index = 0
+    persistent = FALSE
+    listStringEnable = FALSE
+    applySelect = FALSE
+    name = ""
+    newName = ""
+    overflowMode = None
+    maxSize = 0
+    useInsertTemplate = FALSE
+    posXYZ = "37.9188690185547 28.0423259735107 0.5"
+    posC = 0
+    posT = 0
+    posU = 0
+    vecXYZ = "0 0 0"
+    type = 0
+    newPosXYZ = "0 0 0"
+    newPosC = 0
+    newPosT = 0
+    newPosU = 0
+    newVecXYZ = "0 0 0"
+    newType = 0
+  }
+}
+module Arithmetic1 {
+  internal  {
+    frame = "613 21 120 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1154 500 318 66"
+        sizeHint = "314 66"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic1
+    function = Invert
+    constant = 0
+  }
+}
+module View2D {
+  internal  {
+    frame = "461 77 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1537 238 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D3
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 63.5000419616699
+    lutWidth = 156.734939575195
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module KernelEditor {
+  internal  {
+    frame = "757 149 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1117 68 409 835"
+        sizeHint = "409 835"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = KernelEditor3
+    kernelX = 1
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    fieldWidth = 10
+    precision = 6
+    value = 1
+    kernel = "(*,0,0,0,0,0):    1.000000
+(*,1,0,0,0,0):    1.000000
+(*,2,0,0,0,0):    1.000000
+
+"
+  }
+}
+module KernelEditor {
+  internal  {
+    frame = "757 229 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1117 68 409 835"
+        sizeHint = "409 835"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = KernelEditor2
+    kernelX = 3
+    kernelY = 1
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    fieldWidth = 10
+    precision = 6
+    value = 1
+    kernel = "(*,0,0,0,0,0):    1.000000,  1.000000,  1.000000
+
+"
+  }
+}
+module KernelEditor {
+  internal  {
+    frame = "765 317 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1117 66 409 835"
+        sizeHint = "409 835"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = KernelEditor1
+    kernelX = 3
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    fieldWidth = 10
+    precision = 6
+    value = 1
+    kernel = "(*,0,0,0,0,0):    1.000000,          ,          
+(*,1,0,0,0,0):            ,  1.000000,          
+(*,2,0,0,0,0):            ,          ,  1.000000
+
+"
+  }
+}
+module KernelEditor {
+  internal  {
+    frame = "757 397 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1117 60 409 835"
+        sizeHint = "409 835"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = KernelEditor
+    kernelX = 3
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    fieldWidth = 10
+    precision = 6
+    value = 1
+    kernel = "(*,0,0,0,0,0):            ,          ,  1.000000
+(*,1,0,0,0,0):            ,  1.000000,          
+(*,2,0,0,0,0):    1.000000,          ,          
+
+"
+  }
+}
+module Morphology {
+  internal  {
+    frame = "613 141 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1148 243 327 525"
+        sizeHint = "327 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Morphology5
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    filterMode = Erosion
+    kernelX = 3
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = "(*,0,0,0,0,0):    1.000000
+(*,1,0,0,0,0):    1.000000
+(*,2,0,0,0,0):    1.000000
+
+"
+    useExternalKernel = TRUE
+  }
+}
+module Morphology {
+  internal  {
+    frame = "613 221 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1148 243 327 525"
+        sizeHint = "327 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Morphology4
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    filterMode = Dilation
+    kernelX = 3
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = "(*,0,0,0,0,0):    1.000000,  1.000000,  1.000000
+
+"
+    useExternalKernel = TRUE
+  }
+}
+module Morphology {
+  internal  {
+    frame = "613 301 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1148 243 327 525"
+        sizeHint = "327 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Morphology3
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    filterMode = Erosion
+    kernelX = 3
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = "(*,0,0,0,0,0):    1.000000,          ,          
+(*,1,0,0,0,0):            ,  1.000000,          
+(*,2,0,0,0,0):            ,          ,  1.000000
+
+"
+    useExternalKernel = FALSE
+  }
+}
+module Morphology {
+  internal  {
+    frame = "613 373 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1148 243 327 525"
+        sizeHint = "327 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Morphology2
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    filterMode = Dilation
+    kernelX = 3
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = "(*,0,0,0,0,0):            ,          ,  1.000000
+(*,1,0,0,0,0):            ,  1.000000,          
+(*,2,0,0,0,0):    1.000000,          ,          
+
+"
+    useExternalKernel = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "493 397 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1668 279 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D1
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 89.8874816894531
+    lutWidth = 222.48747253418
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "333 213 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1236 274 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 59.2875213623047
+    lutWidth = 251.812438964844
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = FALSE
+    hiResRendering = TRUE
+  }
+}
+module Morphology {
+  internal  {
+    frame = "333 333 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1148 271 327 525"
+        sizeHint = "327 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Morphology1
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    filterMode = Dilation
+    kernelX = 5
+    kernelY = 5
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = ""
+    useExternalKernel = FALSE
+  }
+}
+module Morphology {
+  internal  {
+    frame = "337 437 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1148 243 327 525"
+        sizeHint = "327 525"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Morphology
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    filterMode = Erosion
+    kernelX = 5
+    kernelY = 5
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = ""
+    useExternalKernel = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "537 557 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1145 321 332 369"
+        sizeHint = "332 369"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_6A/images/ejercicios/AMOUR.png
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    suppressMLImageFormatCheckSumTests = FALSE
+  }
+}
+connections  {
+  View2D6.inImage = ConnectedComponentsToImage1.output0
+  View2D6.inInvPreLUT = SoGroup.self
+  SoView2DOverlay.image = ConnectedComponentsToImage1.output0
+  SoGroup.children = "SoView2DMarkerEditor.self SoView2DOverlay.self"
+  View2D5.inImage = Arithmetic1.output0
+  ConnectedComponentsInfo.inClusters = FilterConnectedComponents1.outClusters
+  Threshold1.input0 = ImageLoad.output0
+  ConnectedComponentsToImage1.inClusters = FilterConnectedComponents1.outClusters
+  FilterConnectedComponents1.inClusters = ComputeConnectedComponents.outClusters
+  FilterConnectedComponents1.inMarkerList = SoView2DMarkerEditor.outXMarkerList
+  ComputeConnectedComponents.input0 = Arithmetic1.output0
+  Arithmetic1.input0 = Morphology5.output0
+  View2D3.inImage = Morphology5.output0
+  Morphology5.input0 = Morphology4.output0
+  Morphology5.externalKernel = KernelEditor3.kernel
+  Morphology4.input0 = Morphology3.output0
+  Morphology4.externalKernel = KernelEditor2.kernel
+  Morphology3.input0 = Morphology2.output0
+  Morphology3.externalKernel = KernelEditor1.kernel
+  Morphology2.input0 = Threshold1.output0
+  Morphology2.externalKernel = KernelEditor.kernel
+  View2D1.inImage = ImageLoad.output0
+  View2D.inImage = Morphology1.output0
+  Morphology1.input0 = Morphology.output0
+  Morphology.input0 = ImageLoad.output0
+}
+networkModel = ""

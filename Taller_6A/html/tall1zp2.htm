@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Ejemplos de filtros no lineales</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall1zp2.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="gri796" id="gri796"></a>Ejemplos de filtros no
+lineales</h1>
+
+<p>Imágenes de trabajo: <a href=
+"tall1wqh.htm"><b>morpho.png</b></a>, <a href=
+"tall8qr0.htm"><b>fissure.png</b></a></p>
+
+<p>Los filtros lineales calculan siempre un promedio ponderado de
+todos los píxeles de un cierto vecindario. Los filtros no lineales
+permiten, entre otras, hacer una selección dentro de este
+vecindario y utilizar únicamente un subconjunto de píxeles que
+presentan propiedades comunes.</p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm255.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm256.gif" alt="" border=
+"0"></a>. Abra la imagen <b>morpho.png</b>.</p>
+
+<p>3- Perturbe la imagen con 25% de ruido “sal y pimienta”<a href=
+"tall26t3.htm"><img src="../images/bm257.gif" alt="" border=
+"0"></a> (en la imagen ya existen pixeles aberrantes (con
+intensidades extremas), esta operación es hecha para amplificar el
+fenómeno y facilitar la respuesta a la pregunta 9).</p>
+
+<p>·<b>Nota:</b> El ruido “pimienta y sal” está constituido de
+picos claros y oscuros (cuyos valores se deben definir en el
+módulo) con distribución espacial aleatoria. 25 % de pixeles
+perturbados por este ruido son suficientes para que la imagen
+morpho.png sea bastante degradada.</p>
+
+<p>4- Aplique un filtro promedio 3x3<a href=
+"tall7856.htm"><img src="../images/bm258.gif" alt="" border=
+"0"></a> sobre la imagen con ruido. Visualmente, cómo es el
+resultado y a qué se debe?</p>
+
+<p>5. Aplique un filtro Sigma 3x3<a href="tall63c9.htm"><img src=
+"../images/bm259.gif" alt="" border="0"></a> sobre la imagen con
+ruido.</p>
+
+<p>·Visualmente cómo es el resultado comparado con el filtro
+promedio lineal?</p>
+
+<p>·Consultando la definición del Sigma en la documentación de
+MeVisLab, explique este resultado.</p>
+
+<p>·En el caso del ruido “sal y pimienta”, después de aplicar el
+filtro Sigma quedan algunos puntos aberrantes? A qué se debe
+esto?</p>
+
+<p>6. Aplique un filtro mediano 3x3<a href="tall4wvs.htm"><img src=
+"../images/bm260.gif" alt="" border="0"></a> a la imagen con
+ruido.</p>
+
+<p>·Visualmente cómo es el resultado comparado con los dos filtros
+anteriores?</p>
+
+<p>·A qué se debe este resultado?</p>
+
+<p>·Evalúe los otros filtros que ofrece el módulo Rank: Id, Rank,
+Min y Max. Explique su comportamiento.</p>
+
+<p>7. Repita las operaciones 2 a 6, pero con un ruido
+uniforme<a href="tall5x66.htm"><img src="../images/bm261.gif" alt=
+"" border="0"></a> de amplitud 30.</p>
+
+<p><b>·Nota:</b> Contrariamente al ruido “sal y pimienta”, el ruido
+uniforme afecta todos los píxeles de la imagen. Se trata de un
+ruido aditivo cuya amplitud está distribuida siguiendo una ley
+uniforme.</p>
+
+<p>8. Pregunta 7 con la imagen <b>fissure.png</b>.</p>
+
+<p>9. Compare los resultados obtenidos. Concluya en qué casos
+(características de la imagen, tipo de ruido, ...) se usan cada uno
+de estos filtros.</p>
+
+<p>10. Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm262.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm263.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

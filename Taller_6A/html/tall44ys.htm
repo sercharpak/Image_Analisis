@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Operadores de apertura y de cierre</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall44ys.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="pdhzod" id="pdhzod"></a>Operadores de apertura<a href=
+"tall6mw7.htm"><img src="../images/bm292.gif" alt="" border=
+"0"></a> y de cierre<a href="tall1x4b.htm"><img src=
+"../images/bm293.gif" alt="" border="0"></a></h1>
+
+<p>Imagen de trabajo: <a href=
+"tall2dv4.htm"><b>amour.png</b></a></p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm294.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm295.gif" alt="" border=
+"0"></a>. Abra la imagen <b>amour.png</b><u>.</u></p>
+
+<p>3- Realice la operación de apertura<a href=
+"tall097o.htm"><img src="../images/bm296.gif" alt="" border=
+"0"></a>, con una máscara cuadrada de tamaño 5x5<a href=
+"tall4y5w.htm"><img src="../images/bm297.gif" alt="" border=
+"0"></a>.</p>
+
+<p>Qué partes fueron suprimidas?</p>
+
+<p><b><u>Nota:</u></b> No es lo mismo aplicar dos veces seguidas la
+operación de apertura con una máscara de 3x3 que una sola vez con
+una máscara de 5x5. Hacer una segunda apertura no sirve de nada (no
+produce ningún efecto) ya que la operación de apertura es
+idempotente, es decir: apertura(apertura(imagen, máscara)) =
+apertura(imagen, máscara).</p>
+
+<p>4- Retome la imagen original, y aplique una <a href=
+"tall3h85.htm">umbralización</a><a href="tall0m7k.htm"><img src=
+"../images/bm298.gif" alt="" border="0"></a> para binarizarla
+(umbral = 35).</p>
+
+<p>5- Realice el cierre de la imagen. Para esto, efectúe 4
+cierres<a href="tall9im0.htm"><img src="../images/bm299.gif" alt=""
+border="0"></a> aplicando sucesivamente las 4 máscaras<a href=
+"tall4y5w.htm"><img src="../images/bm300.gif" alt="" border=
+"0"></a> lineales simétricas de tamaño 1x3 (en este orden: las dos
+diagonales ( / y después \ ), horizontal ( - ) y vertical ( |
+)).</p>
+
+<p>Utilice 4 módulos KernelEditor<a href="tall67z3.htm"><img src=
+"../images/bm301.gif" alt="" border="0"></a> para la definición de
+las máscaras. Conecte cada Kernel al módulo de cierre
+correspondiente (parámetro kernel). Utilice como guía el Taller
+4.</p>
+
+<p>Cada vez, se procesa la imagen resultante del cierre anterior.
+Cuál es el efecto obtenido?</p>
+
+<p><b>NOTA:</b>
+</p>
+
+<p>Las máscaras diagonales deben crearse generando una matriz de
+3x3 y colocando 1’ s sobre las diagonales. Los demás elementos se
+deben dejar vacíos (SIN CEROS).</p>
+
+<p>La máscara horizontal debe crearse generando una matriz de 3x1
+llena de 1’s.</p>
+
+<p>La máscara vertical debe crearse generando una matriz de 1x3
+llena de 1’s.</p>
+
+<p>6- Tome el negativo<a href="tall18dx.htm"><img src=
+"../images/bm302.gif" alt="" border="0"></a> de la imagen
+resultado, de forma tal que las figuras se vuelvan blancas.</p>
+
+<p>7- Seleccione el componente conexo más grande<a href=
+"tall9xis.htm"><img src="../images/bm303.gif" alt="" border=
+"0"></a>. Cuál es el resultado?</p>
+
+<p>8- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm304.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm305.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

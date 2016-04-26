@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Filtro promedio</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall96jy.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="kfs7pn" id="kfs7pn"></a>Filtro promedio<a href=
+"tall2t6e.htm"><img src="../images/bm235.gif" alt="" border=
+"0"></a></h1>
+
+<p>Imagen de trabajo: <a href="tall2xip.htm"><b>meb.png</b></a></p>
+
+<p>El filtro promedio es calculado por convolución de la imagen con
+una imagen uniforme.</p>
+
+<p>Corresponde al “suavizado” de la imagen.</p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm236.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm237.gif" alt="" border=
+"0"></a>. Abra la imagen <b>meb.png</b>.</p>
+
+<p>3- Visualice la imagen<a href="tall9hgl.htm"><img src=
+"../images/bm238.gif" alt="" border="0"></a> y su
+histograma<a href="tall4p9e.htm"><img src="../images/bm239.gif"
+alt="" border="0"></a>.</p>
+
+<p>4- Describa su forma (continuo?, discontinuo?, niveles de gris?,
+...)</p>
+
+<p>5- Partiendo del histograma, deduzca con cuántos bits ha sido
+numerizada esta imagen.</p>
+
+<p>6-. Aplique el filtro promedio utilizando una máscara de tamaño
+3x3<a href="tall7856.htm"><img src="../images/bm240.gif" alt=""
+border="0"></a> a esta imagen. Cualitativamente, cómo es la imagen
+resultado?</p>
+
+<p>7- Visualice el histograma<a href="tall4p9e.htm"><img src=
+"../images/bm241.gif" alt="" border="0"></a> de esta nueva imagen,
+y compárelo con el histograma de la imagen original (forma general,
+altura de los picos, ...) .</p>
+
+<p>8- Calcule la imagen de diferencia<a href=
+"tall2fub.htm"><img src="../images/bm242.gif" alt="" border=
+"0"></a> con la original. Justifique el resultado obtenido (en
+cuáles regiones de la imagen son visibles las diferencias?, por
+qué?...)</p>
+
+<p>9- Ahora filtre la imagen original con un filtro promedio
+utilizando una máscara de tamaño 5x5<a href=
+"tall7856.htm"><img src="../images/bm243.gif" alt="" border=
+"0"></a>. Paralelamente, filtre la imagen original, aplicando
+consecutivamente sobre esta, dos filtros promedio de tamaño 3x3.
+Haga una evaluación visual de los resultados:</p>
+
+<p>·Las dos imágenes obtenidas son idénticas?</p>
+
+<p>·Por qué?</p>
+
+<p>·Cuál de los dos tratamientos suprime mejor los cambios de nivel
+de gris de la imagen?</p>
+
+<p>10- Convolucionar una imagen dos veces con una misma máscara
+equivale a hacer una sola convolución con otra máscara, obtenida
+por convolución de la máscara inicial con ella misma.</p>
+
+<p>·Cuál es entonces la máscara resultante de la convolución de la
+máscara del filtro promedio 3x3 con ella misma?</p>
+
+<p>·Cómo es la máscara del filtro promedio 5x5?</p>
+
+<p>·Con base en la forma de estas dos máscaras, justifique los
+resultados visuales obtenidos en el punto anterior.</p>
+
+<p>11- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm244.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm245.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>
