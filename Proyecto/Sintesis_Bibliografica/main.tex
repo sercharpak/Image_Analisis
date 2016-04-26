@@ -1,0 +1,449 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+%\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+
+% Paquetes a usar
+%\usepackage[spanish]{babel}   %%para Colocar el Español
+\usepackage[utf8]{inputenc} %%para usar tildes adecuadamente
+\usepackage{amssymb}          % Símbolos
+\usepackage{hyperref}         % Vinculos 
+\usepackage{graphics}         % Subfiguras
+\usepackage{pdfpages}         % incluir PDF
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage[spanish]{babel}   %%para Colocar el Español
+
+\usepackage{filecontents,lipsum}
+\usepackage[noadjust]{cite}
+\begin{filecontents*}{references.bib}
+@article{Khoe:1994:CML:2288694.2294265,
+    author = {Khoe, G. -D.},
+    title = {Coherent multicarrier lightwave technology for flexible capacity networks},
+    journal = {Comm. Mag.},
+    issue_date = {March 1994},
+    volume = {32},
+    number = {3},
+    month = mar,
+    year = {1994},
+    issn = {0163-6804},
+    pages = {22--33},
+    numpages = {12},
+    url = {http://dx.doi.org/10.1109/35.267438},
+    doi = {10.1109/35.267438},
+    acmid = {2294265},
+    publisher = {IEEE Press},
+    address = {Piscataway, NJ, USA},
+}
+
+@article{cegomez,
+title = "Responses of the tropical gorgonian coral Eunicea fusca to ocean acidification conditions",
+keywords = "Calcein, Carbonate saturation state, Caribbean, Ocean acidification, Tropical gorgonian",
+author = "Gómez, {C. E.} and Paul, {V. J.} and R. Ritson-Williams and N. Muehllehner and C. Langdon and Sánchez, {J. A.}",
+year = "2015",
+month = "6",
+doi = "10.1007/s00338-014-1241-3",
+volume = "34",
+pages = "451--460",
+journal = "Coral Reefs",
+issn = "0722-4028",
+number = "2",
+}
+
+@INPROCEEDINGS{estrellas,
+author={A. Mendes and M. Hoeberechts and A. B. Albu},
+booktitle={Applications and Computer Vision Workshops (WACVW), 2015 IEEE Winter},
+title={Evolutionary Computational Methods for Optimizing the Classification of Sea Stars in Underwater Images},
+year={2015},
+pages={44-50},
+keywords={evolutionary computation;geophysical image processing;image classification;image sampling;oceanographic techniques;video signal processing;automated processing method;automatic classification;classification process;evolutionary computational method;human analyst;imagery;marine organism;sampling method;sea star classification;underwater images;video;Feature extraction;Genetic algorithms;Image segmentation;Marine animals;Optimization;Shape;Support vector machine classification},
+doi={10.1109/WACVW.2015.9},
+month={Jan},}
+
+@INPROCEEDINGS{exprobots,
+author={A. Maldonado-Ramírez and L. A. Torres-Méndez},
+booktitle={OCEANS 2015 - Genova},
+title={Autonomous robotic exploration of coral reefs using a visual attention-driven strategy for detecting and tracking regions of interest},
+year={2015},
+pages={1-5},
+keywords={autonomous underwater vehicles;object detection;object tracking;robot vision;video signal processing;coral reefs;regions of interest detection;regions of interest tracking;superpixel descriptors;underwater environments;underwater scenes;video-observations;visual attention-driven strategy;visual-based autonomous robotic exploration;Collision avoidance;Computational modeling;Image color analysis;Navigation;Robot kinematics;Visualization},
+doi={10.1109/OCEANS-Genova.2015.7271757},
+month={May},}
+
+@inproceedings{slope,
+author={M. R. Algodon and A. Hilomen and M. Soriano},
+booktitle={OCEANS 2015 - MTS/IEEE Washington},
+title={Estimating coral reef slope or camera pitch from video},
+year={2015},
+pages={1-5},
+keywords={cameras;image motion analysis;video signal processing;benthos monitoring setup;camera pitch;camera rotation angle distorting effect elimination;coral colony area estimation;coral reef slope estimation;image feature movement;reef slope distorting effect elimination;tracks;video image improvement;Cameras;Correlation;Estimation;Feature extraction;Mathematical model;Sea measurements;Tracking;Camera Rotation;Coral Assessment;Coral Reef Slope},
+month={Oct},}
+
+@INPROCEEDINGS{pequenosinforma,
+author={O. Beijbom and P. J. Edmunds and D. I. Kline and B. G. Mitchell and D. Kriegman},
+booktitle={Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference on},
+title={Automated annotation of coral reef survey images},
+year={2012},
+pages={1170-1177},
+keywords={cameras;ecology;geophysical image processing;image colour analysis;image texture;oceanographic techniques;rocks;sand;Moorea Labeled Corals;algae;automatic acquisition systems;class variation;color descriptors;computer vision community;coral reef coverage estimation;coral reef survey images;digital cameras;ecological data;expert annotations;image libraries;image quality;manual image analysis;multiyear dataset;performance benchmarking;quantitative analysis;reef surface;reliable automated coral reef image annotation;rock;sand;texture descriptors;valuable scientific data;viewpoints;Algae;Benchmark testing;Computer vision;Histograms;Image color analysis;Shape;Vectors},
+doi={10.1109/CVPR.2012.6247798},
+ISSN={1063-6919},
+month={June},}
+
+@INPROCEEDINGS{autopistas,
+author={A. K. Tripathi and S. Swarup},
+booktitle={Advance Computing Conference (IACC), 2013 IEEE 3rd International},
+title={Shape and color features based airport runway detection},
+year={2013},
+pages={836-841},
+keywords={feature extraction;filtering theory;image colour analysis;image denoising;image segmentation;object detection;Frangi filter;airport runway detection;anisotropic diffusion;chroma based feature;color feature;commercial application;defence application;false runway candidate;noise immunity;qualitative analysis;quantitative analysis;runway segmentation;shape feature;Airports;Algorithm design and analysis;Detection algorithms;Image color analysis;Image segmentation;Roads;Shape;Frangi filter;Runway;anisotropic diffusion;chroma features and tubular structure},
+doi={10.1109/IAdCC.2013.6514335},
+month={Feb},}
+
+@INPROCEEDINGS{flujo,
+author={E. Türetken and C. Becker and P. Glowacki and F. Benmansour and P. Fua},
+booktitle={2013 IEEE International Conference on Computer Vision},
+title={Detecting Irregular Curvilinear Structures in Gray Scale and Color Imagery Using Multi-directional Oriented Flux},
+year={2013},
+pages={1553-1560},
+keywords={image colour analysis;object detection;optimisation;biological imagery;color datasets;color imagery;complex optimization problem;gray scale datasets;gray scale imagery;image gradient flux maximization;irregular curvilinear structure detection;multidirectional oriented flux;noisy image stacks;radii;Biomedical imaging;Biomedical measurement;Color;Eigenvalues and eigenfunctions;Image color analysis;Vectors;Curvilinear networks;curvilinear structures;image gradient flux;multi-directional oriented flux;optimally oriented flux;segmentation;tubular structures;tubularity measure},
+doi={10.1109/ICCV.2013.196},
+ISSN={1550-5499},
+month={Dec},}
+
+@ARTICLE{espina,
+author={B. De Leener and J. Cohen-Adad and S. Kadoury},
+journal={IEEE Transactions on Medical Imaging},
+title={Automatic Segmentation of the Spinal Cord and Spinal Canal Coupled With Vertebral Labeling},
+year={2015},
+volume={34},
+number={8},
+pages={1705-1718},
+keywords={biomedical MRI;bone;diseases;image segmentation;image sequences;injuries;medical image processing;neurophysiology;Dice coefficients;MRI contrast;PropSeg method;SC injury;T1-weighted sequences;T2*-weighted sequences;T2-weighted sequences;automatic intervertebral disk identification method;automatic segmentation;bias-free measurement;clinician diagnosis;clinician prognosis;generic coordinate system;intersubject comparison;intrasubject comparison;multiresolution propagation;neurodegenerative diseases;spinal canal;spinal cord atrophy;traumatic diseases;tubular deformable models;vertebral labeling;vertebral level identification method;vertebral-based normalization;Deformable models;Image segmentation;Irrigation;Mathematical model;Measurement;Spinal cord;Transforms;Automatic segmentation;CSF;MRI;deformable model;spinal canal;spinal cord;vertebral labeling},
+doi={10.1109/TMI.2015.2437192},
+ISSN={0278-0062},
+month={Aug},}
+
+@INPROCEEDINGS{opti,
+author={A. Jezierska and O. Miraucourt and H. Talbot and S. Salmon and N. Passat},
+booktitle={2014 IEEE International Conference on Image Processing (ICIP)},
+title={A non-local chan-vese model for sparse, tubular object segmentation},
+year={2014},
+pages={907-911},
+keywords={image segmentation;object detection;optimisation;Chan-Vese framework;continuous optimization scheme;nonlocal fitting term;object sparsity;piecewise-constant model;sparse object segmentation;tubular object segmentation;Biomedical imaging;Context;Image segmentation;Noise;Optimization;Retina;Three-dimensional displays;Variational image segmentation;angiographic imaging;nonlocal data fidelity;tubular structures},
+doi={10.1109/ICIP.2014.7025182},
+ISSN={1522-4880},
+month={Oct},}
+
+@article{stokes_automated_2009,
+	title = {Automated processing of coral reef benthic images: {Coral} reef benthic imaging},
+	volume = {7},
+	issn = {15415856},
+	shorttitle = {Automated processing of coral reef benthic images},
+	url = {http://doi.wiley.com/10.4319/lom.2009.7.157},
+	doi = {10.4319/lom.2009.7.157},
+	language = {en},
+	number = {2},
+	urldate = {2016-04-26TZ},
+	journal = {Limnology and Oceanography: Methods},
+	author = {Stokes, M. Dale and Deane, Grant B.},
+	month = feb,
+	year = {2009},
+	pages = {157--168}
+}
+
+@article{schindelin_fiji:_2012,
+	title = {Fiji: an open-source platform for biological-image analysis},
+	volume = {9},
+	issn = {1548-7091, 1548-7105},
+	shorttitle = {Fiji},
+	url = {http://www.nature.com/doifinder/10.1038/nmeth.2019},
+	doi = {10.1038/nmeth.2019},
+	number = {7},
+	urldate = {2016-04-26TZ},
+	journal = {Nature Methods},
+	author = {Schindelin, Johannes and Arganda-Carreras, Ignacio and Frise, Erwin and Kaynig, Verena and Longair, Mark and Pietzsch, Tobias and Preibisch, Stephan and Rueden, Curtis and Saalfeld, Stephan and Schmid, Benjamin and Tinevez, Jean-Yves and White, Daniel James and Hartenstein, Volker and Eliceiri, Kevin and Tomancak, Pavel and Cardona, Albert},
+	month = jun,
+	year = {2012},
+	pages = {676--682}
+}
+
+@inproceedings{gulshan_geodesic_2010,
+	title = {Geodesic star convexity for interactive image segmentation},
+	isbn = {978-1-4244-6984-0},
+	url = {http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=5540073},
+	doi = {10.1109/CVPR.2010.5540073},
+	urldate = {2016-04-26TZ},
+	publisher = {IEEE},
+	author = {Gulshan, Varun and Rother, Carsten and Criminisi, Antonio and Blake, Andrew and Zisserman, Andrew},
+	month = jun,
+	year = {2010},
+	pages = {3129--3136}
+}
+
+@article{hoegh-guldberg_coral_2007,
+	title = {Coral {Reefs} {Under} {Rapid} {Climate} {Change} and {Ocean} {Acidification}},
+	volume = {318},
+	issn = {0036-8075, 1095-9203},
+	url = {http://www.sciencemag.org/cgi/doi/10.1126/science.1152509},
+	doi = {10.1126/science.1152509},
+	language = {en},
+	number = {5857},
+	urldate = {2016-04-26TZ},
+	journal = {Science},
+	author = {Hoegh-Guldberg, O. and Mumby, P. J. and Hooten, A. J. and Steneck, R. S. and Greenfield, P. and Gomez, E. and Harvell, C. D. and Sale, P. F. and Edwards, A. J. and Caldeira, K. and Knowlton, N. and Eakin, C. M. and Iglesias-Prieto, R. and Muthiga, N. and Bradbury, R. H. and Dubi, A. and Hatziolos, M. E.},
+	month = dec,
+	year = {2007},
+	pages = {1737--1742}
+}
+
+@article{treibitz_wide_2015,
+	title = {Wide {Field}-of-{View} {Fluorescence} {Imaging} of {Coral} {Reefs}},
+	volume = {5},
+	issn = {2045-2322},
+	url = {http://www.nature.com/articles/srep07694},
+	doi = {10.1038/srep07694},
+	urldate = {2016-04-26TZ},
+	journal = {Scientific Reports},
+	author = {Treibitz, Tali and Neal, Benjamin P. and Kline, David I. and Beijbom, Oscar and Roberts, Paul L. D. and Mitchell, B. Greg and Kriegman, David},
+	month = jan,
+	year = {2015},
+	pages = {7694}
+}
+
+@article{neal_methods_2015,
+	title = {Methods and measurement variance for field estimations of coral colony planar area using underwater photographs and semi-automated image segmentation},
+	volume = {187},
+	issn = {0167-6369, 1573-2959},
+	url = {http://link.springer.com/10.1007/s10661-015-4690-4},
+	doi = {10.1007/s10661-015-4690-4},
+	language = {en},
+	number = {8},
+	urldate = {2016-04-26TZ},
+	journal = {Environmental Monitoring and Assessment},
+	author = {Neal, Benjamin P. and Lin, Tsung-Han and Winter, Rivah N. and Treibitz, Tali and Beijbom, Oscar and Kriegman, David and Kline, David I. and Greg Mitchell, B.},
+	month = aug,
+	year = {2015}
+}
+
+@article{schneider_nih_2012,
+	title = {{NIH} {Image} to {ImageJ}: 25 years of image analysis},
+	volume = {9},
+	issn = {1548-7105},
+	shorttitle = {{NIH} {Image} to {ImageJ}},
+	abstract = {For the past 25 years NIH Image and ImageJ software have been pioneers as open tools for the analysis of scientific images. We discuss the origins, challenges and solutions of these two programs, and how their history can serve to advise and inform other software projects.},
+	language = {eng},
+	number = {7},
+	journal = {Nature Methods},
+	author = {Schneider, Caroline A. and Rasband, Wayne S. and Eliceiri, Kevin W.},
+	month = jul,
+	year = {2012},
+	pmid = {22930834},
+	keywords = {Computational Biology, History, 20th Century, History, 21st Century, Image Processing, Computer-Assisted, National Institutes of Health (U.S.), Software, United States},
+	pages = {671--675}
+}
+
+\end{filecontents*}
+
+\renewcommand{\contentsname}{Tabla de contenido}
+\renewcommand{\partname}{Parte}
+\renewcommand{\appendixname}{Apéndice}
+%\renewcommand{\bibname}{Referencias}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\ifCLASSINFOpdf
+ 
+\else
+
+\fi
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+\title{Automatización de detección de crecimiento de estructuras coralinas}
+
+\author{Sergio Daniel Hernández Charpak,~\IEEEmembership{}
+        José Francisco Molano Pulido~\IEEEmembership{}% <-this % stops a space
+\thanks{}% <-this % stops a space
+\thanks{}% <-this % stops a space
+\thanks{}}
+
+% The paper headers
+\markboth{Imágenes y Visión, primer semestre 2016}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+
+\maketitle
+
+
+%\begin{abstract}
+%%\boldmath
+%\blindtext[1]
+%\end{abstract}
+
+%\begin{IEEEkeywords}
+%IEEEtran, journal, \LaTeX, paper, template.
+%\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\section{Estado del Arte}
+En el campo de la biología marina, la evaluación de las principales características de
+los organismos coralinos ha sido soportada por el análisis de imágenes. Mendes
+\cite{estrellas} hace énfasis en que este método corresponde a una alternativa no
+invasiva, factor que resulta importante para la conservación del medio ambiente evitando
+la perturbación de los hábitats. Adicionalmente resalta el hecho de que, particularmente
+en las últimas décadas, el análisis de imágenes para el estudio de los organismos marinos
+se ha apoyado fundamentalmente en las técnicas computacionales. El uso de estas
+herramientas permite manejar grandes volúmenes de información y obtener resultados más
+precisos en aplicaciones que antes eran realizadas mediante procesos manuales. \\
+
+El trabajo realizado en la presente década, en materia de métodos computacionales para el
+estudio de corales, se ha centrado principalmente en el desarrollo de técnicas de
+procesamiento para imágenes adquiridas \textit{in situ}, es decir que han sido obtenidas
+directamente en el hábitat de los organismos a analizar. Es por este motivo que las
+investigaciones realizadas en este período se enfocan en los retos que supone la toma de
+imágenes en entornos no controlados. De esta manera es posible observar propuestas
+centradas en tareas como la corrección de fotografías debido a la inclinación de los
+dispositivos de captura o a pendientes en el suelo marino \cite{slope}, la identificación
+y caracterización de objetos en videos obtenidos mediante exploración robótica autónoma
+\cite{exprobots} y la segmentación en imágenes con estructuras pequeñas sin bordes ni
+formas definidas \cite{pequenosinforma}. Si bien los distintos enfoques expuestos cumplen
+con el objetivo de apoyar procesos para determinar las características principales de las
+organismos coralinos, éstos no son aplicables a las condiciones de laboratorio propias
+del presente proyecto. \\
+
+Un enfoque más aproximado a la detección de crecimiento de corales en condiciones de
+laboratorio, dada la geometría característica de las estructuras desarrolladas en este
+caso, corresponde a las técnicas de segmentación de estructuras tubulares. Este también
+corresponde a un campo ampliamente estudiado en la disciplina del procesamiento de
+imágenes debido a su extenso margen de aplicación. En particular, se han identificado
+tres categorías principales en las que se pueden clasificar los métodos de segmentación
+de estructuras tubulares: métodos manuales asistidos, métodos semi-automatizados y
+métodos automatizados.
+
+
+\subsection{Métodos manuales asistidos}
+
+Gran parte de los trabajos en el campo de la segmentación de imágenes biológicas
+involucra una interacción del experto con un software especializado. Describimos los
+métodos manuales más sofisticados que \textit{dibujar} el contorno de un objeto sobre una
+imagen, alternativa que aún es presentada como viable \cite{neal_methods_2015} cuando las imágenes son de alta complejidad.
+
+Existen numerosos métodos de segmentación para asistir interactivamente al usuario.
+Nombramos uno de ellos, el método de estrellas geodésicas convexas, propuesto por Gulshan
+et al., \cite{gulshan_geodesic_2010}, ya que es usado en el campo relevante a este
+trabajo \cite{treibitz_wide_2015} y brinda buenos resultados.
+
+La distribución Fiji
+de ImageJ \cite{schindelin_fiji:_2012} es actualmente el software estado del arte en este
+campo y lleva más de 25 años \cite{schneider_nih_2012} siendo utilizado en este a través
+de sus distintas evoluciones. Sin embargo la interacción consume tiempo, dependiendo del
+problema. En el trabajo
+de Stokes et al \cite{stokes_automated_2009} de clasificación de especies de corales en
+imágenes \textit{in situ}, el análisis de clasificación manual toma entre 15-30 min dependiendo de la
+complejidad de la imagen. Trabajando con grandes conjuntos de datos el tiempo (y costo)
+del experto se vuelven inviables.\\
+
+
+%Posicion
+Para imágenes complejas evitar la interacción de un experto es difícil. Sin embargo, para
+imágenes simples evitar dicha interacción para poder analizar grandes cantidades de
+imágenes es deseable.
+
+
+\subsection{Métodos semi-automatizados}
+%Esto quizas podria no ponerse
+Automatizar los métodos de análisis de imágenes hace parte de los retos en este campo.
+%Gin de lo que podría no ponerse
+Se han obtenido resultados relevantes a través de métodos semi-asistidos o
+semi-automatizados. 
+
+Treibitz et al. \cite{treibitz_wide_2015}, basándose en el método de
+Gulshan et al. \cite{gulshan_geodesic_2010}, desarrollan un método semi-asistido para
+imágenes \textit{in situ} fluorescentes de campo amplio de corales. El usuario interactiva indica
+brevemente el ruido y una región de objeto. El algoritmo segmenta los objetos dados estos
+datos. El tratamiento que enseguida se le hace a los objetos es automatizado
+(no-interactivo). Así, logran mostrar una correlación entre los espectros resultantes
+este tratamiento y las medidas de espectrómetro de los mismos corales. 
+
+De la misma manera, Neal et al. \cite{neal_methods_2015}, con el objetivo de hacer medición de las varianzas de de estimaciones de campo en colonias de corales, utiliza una
+segmentación de imágenes \textit{in situ} interactiva en la que se indican ruido y objetos antes de que el software identifique los contornos. El usuario tiene la posibilidad de corregir dichos contornos. El análisis que luego hace el software es independiente y efectivo.
+
+%Posicion
+Así, métodos semi-automatizados, que requieren en algún paso, la interacción con el
+usuario/experto brindan resultados. Lograr evitar esta interacción es un reto dada la
+complejidad de las imágenes \textit{in situ}. 
+
+
+
+\subsection{Métodos automatizados}
+Esta categoría corresponde al conjunto de métodos más relevante para el desarrollo del
+presente proyecto en la medida en que uno de los requerimientos más importantes del mismo
+corresponde a la caracterización sistemática, en términos de tamaño, de los organismos
+coralinos sin intervención alguna del usuario. En particular, estas técnicas hacen uso de
+algoritmos basados en niveles de intensidad, colores y detección de formas con la
+finalidad de identificar objetos de interés. \\
+
+En primer lugar, se destaca el método propuesto por Tripathi et. al. \cite{autopistas}
+para la identificación de autopistas en imágenes aéreas, el cual consta de dos etapas
+principales: segmentación gruesa y refinamiento. La primera etapa hace uso de los niveles
+de intensidad y la geometría presente en la imagen para realizar una selección preliminar
+de un conjunto de píxeles de interés. Posteriormente, se realiza el refinamiento
+respectivo para seleccionar los píxeles finales por medio de un análisis de croma y
+formas. Este algoritmo resulta interesante para la identificación de estructuras
+tubulares debido a la aplicación de una etapa previa de segmentación general, esto
+permite que su srespectiva ejecución sea más eficiente en relación a otras técnicas. \\
+
+Asimismo, se destaca el uso de algoritmos basados en la curvatura. Turetken et. al.
+\cite{flujo} demostraron la efectividad de emplear conceptos asociados al flujo en
+estructuras tubulares para la segmentación de objetos. En particular han empleado el
+flujo óptimo orientado (OOF), el flujo orientado multi-dimensional (MDOF) y el flujo
+orientado antisimétrico (OFA) para la identificación de estructuras de interés,
+principalmente vasos sanguíneos en imágenes médicas. Estos métodos resultan
+particularmente interesantes debido a que son poco susceptibles a errores de segmentación
+debido a estructuras adyacentes.\\
+
+Finalmente, se desataca el caso de la segmentación basada en la identificación de figuras
+geométricas. Para ilustrar este punto, se puede tomar como referencia la investigación
+desarrollada por De Leener et. al. \cite{espina} quienes propusieron un método para la
+identificación de vértebras en la espina dorsal, una estructura tubular, basándose en la
+detección de elipses y tomando provecho de las características de simetría de la anatomía
+humana. Este método se destaca entre los demás debido a que permite, además de la
+segmentación de la espina dorsal, el etiquetamiento sobre las vértebras que componen
+dicha estructura.\\
+
+
+
+%\section{Conclusion}
+%\blindtext
+
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Some text for the appendix.
+
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+
+
+%The authors would like to thank...
+
+%\ifCLASSOPTIONcaptionsoff
+%  \newpage
+%\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{picture}}]{John Doe}
+%\blindtext
+%\end{IEEEbiography}
+
+\end{document}
+
+
