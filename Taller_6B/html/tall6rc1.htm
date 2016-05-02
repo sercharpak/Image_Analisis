@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Imagen de distancia</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall6rc1.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="_yi3la"></a>Imagen de distancia</h1>
+
+<p>Imagen de trabajo: <a href=
+"tall9bxy.htm"><b>objects.png</b></a></p>
+
+<p>Une imagen de distancia es calculada a partir de una imagen
+binaria.</p>
+
+<p>Esta operación asigna a cada <a href="tall3xb3.htm">pixel</a> de
+la imagen, la distancia euclidiana de éste al objeto (blanco) más
+cercano.</p>
+
+<p>El cálculo exacto es difícil y largo de realizar, pero existen
+algoritmos suficientemente rápidos que permiten encontrar buenas
+aproximaciones de la distancia euclidiana.</p>
+
+<p>Ejercicio:</p>
+
+<p>1 Cree una nueva red en MeVisLab<a href="tall5m8z.htm"><img src=
+"../images/bm318.gif" alt="" border="0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm319.gif" alt="" border=
+"0"></a>. Abra la imagen <b>objects.png</b>.</p>
+
+<p>3- Esta imagen <b>objects.png</b> es una imagen RGB, conviértala a niveles de gris utilizando un
+módulo <i>ColorModelConverter</i>.</p>
+
+<p>4- <a href="tall3h85.htm">Umbralice</a><a href=
+"tall0m7k.htm"><img src="../images/bm320.gif" alt="" border=
+"0"></a> esta imagen para separar los objetos del fondo
+(umbral=70).</p>
+
+<p>5- Calcule la imagen de distancia<a href=
+"tall3x7j.htm"><img src="../images/bm321.gif" alt="" border=
+"0"></a>. Puede efectuar una expansión del contraste<a href=
+"tall24q0.htm"><img src="../images/bm322.gif" alt="" border=
+"0"></a> sobre la imagen de distancia para visualizar mejor el
+resultado. Ajuste el Window/Level</p>
+
+<p>6- Para localizar mejor los objetos en la imagen de distancia,
+calcule el <b>máximo</b><a href="tall3mnb.htm"><img src=
+"../images/bm323.gif" alt="" border="0"></a> entre esta imagen (sin
+la expansión del contraste) y la imagen binaria obtenida en 3.
+Utilizando la imagen resultante, determine la distancia mínima
+entre los dos lápices (utilice los valores de nivel de gris de los
+pixeles desplegados en la parte superior de la ventana del
+programa, cuando se desplaza el cursor sobre la imagen).</p>
+
+<p>7- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm324.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm325.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

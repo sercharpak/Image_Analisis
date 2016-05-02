@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Etiquetado de objetos</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall2kxj.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name=".2wllw"></a>Etiquetado de objetos</h1>
+
+<p>Imagen de trabajo: <a href="tall3g4y.htm"><b>sic.png</b></a></p>
+
+<p>Ejercicio:</p>
+
+<p>El etiquetado consiste en buscar los componentes conexos
+(conjuntos de <a href="tall3xb3.htm">pixeles</a> conexos que tienen
+el mismo nivel, blanco o negro). A cada conjunto (región) así
+formado, se asigna una etiqueta (número de región).</p>
+
+<p><u>Cuidado</u>&nbsp;! En presencia de objetos finos, el
+resultado puede depender de la conectividad (máscara) escogida!</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm307.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm308.gif" alt="" border=
+"0"></a>. Abra la imagen <b>sic.png</b>.</p>
+
+<p>3- <a href="tall3h85.htm">Umbralice</a><a href=
+"tall0m7k.htm"><img src="../images/bm309.gif" alt="" border=
+"0"></a> esta imagen de forma tal que las células del fondo sean
+separadas (umbral entre 55 y 70), y calcule su negativo<a href=
+"tall18dx.htm"><img src="../images/bm310.gif" alt="" border=
+"0"></a>.</p>
+
+<p>4- Con una máscara en cruz de 3x3<a href=
+"tall4y5w.htm"><img src="../images/bm311.gif" alt="" border=
+"0"></a>, haga dilataciones<a href="tall36qw.htm"><img src=
+"../images/bm312.gif" alt="" border="0"></a> para rellenar los
+huecos al interior de las células. Para la generación de la máscara
+utilice el módulo KernelEditor<a href="tall67z3.htm"><img src=
+"../images/bm313.gif" alt="" border="0"></a>. Utilice el Taller 4
+como guía para la definición y conexión de la máscara.</p>
+
+<p><b>NOTA:</b> Las máscaras en cruz deben crearse generando una
+matriz de nxn (tamaño deseado) y colocando 1’ s en la cruz. Los
+demás elementos se deben dejar vacíos (SIN CEROS).</p>
+
+<p>5- Cambie de máscaras: se utilizarán ahora máscaras lineales
+(oblicuas). Utilice las mismas máscaras oblicuas creadas en el
+punto de apertura y cierre de la primera parte (parte a) de este
+taller de morfología matemática. Con el operador de erosión<a href=
+"tall5ae9.htm"><img src="../images/bm314.gif" alt="" border=
+"0"></a>, separe las diferentes células.</p>
+
+<p>Ayuda: Para separar las células es necesario erosionar por lo
+menos 10 veces con una máscara lineal oblicua (/) y 6 veces con una
+máscara ortogonal a la primera.</p>
+
+<p>6- Etiquete la imagen<a href="tall6mk4.htm"><img src=
+"../images/bm315.gif" alt="" border="0"></a>. Modifique el
+Window-Level para ver el resultado. Cuántas células enteras fueron
+detectadas? Qué ocurre con el borde?</p>
+
+<p>7- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm316.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm317.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

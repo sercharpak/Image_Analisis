@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Filtro promedio separable</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall9f92.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="ax0g8v" id="ax0g8v"></a>Filtro promedio
+separable<a href="tall2t6e.htm"><img src="../images/bm246.gif" alt=
+"" border="0"></a></h1>
+
+<p>Imagen de trabajo: <a href="tall2xip.htm"><b>meb.png</b></a></p>
+
+<p>Un filtro lineal de tamaño MxN se dice “separable” cuando se
+puede escribir como el producto de convolución de un filtro Mx1 con
+un filtro 1xN.</p>
+
+<p>Ejemplo:</p>
+
+<p><img src="../images/matrizsep.gif" alt="" border="0">
+</p>
+
+<p>El interés de los filtros separables es que son más rápidos de
+calcular en su forma separada.</p>
+
+<p>Los cálculos del filtro separable se hacen en dos etapas,
+siguiendo los dos ejes correspondientes. Para un filtro de n filas
+y m columnas, se comienza por calcular, en cada pixel, la suma de
+los m pixeles de la misma fila (la máscara centrada en el pixel
+considerado). Es fácil notar que hay muchos cálculos redundantes:
+sólo los dos pixeles de los extremos cambian entre dos sumas
+consecutivas. Nos contentamos entonces con suprimir a la suma
+precedente el nivel de gris del pixel situado al extremo izquierdo
+de la máscara y de agregar el nivel de gris del pixel situado al
+extremo derecho de la máscara. Por lo tanto, el cálculo es
+exactamente el mismo, independientemente del valor de m (a
+excepción de la inicialización y del manejo de efectos de borde).
+Sobre la imagen resultado, se efectúa el mismo procedimiento para
+las columnas, con una máscara vertical de n pixeles, y se divide el
+resultado por mxn precalculado una sola vez.</p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm247.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm248.gif" alt="" border=
+"0"></a>. Abra la imagen <b>meb.png</b>.</p>
+
+<p>3- Cambie su escala<a href="tall0tix.htm"><img src=
+"../images/bm249.gif" alt="" border="0"></a>, para obtener una
+imagen de tamaño 2048x2048.</p>
+
+<p>4- Agregue 3 filtros promedio<a href="tall7856.htm"><img src=
+"../images/bm250.gif" alt="" border="0"></a> <b>NO LOS CONECTE A LA
+IMAGEN DE ENTRADA HASTA NO HABERLOS CONFIGURADO DE LA SIGUIENTE
+MANERA:</b></p>
+
+<p>·Al primer filtro promedio, FP1, configúrele un vecindario
+3x3.</p>
+
+<p>·Al segundo filtro, FP2, configúrele un vecindario 3x1.</p>
+
+<p>·Al tercer filtro, FP3, configúrele un vecindario 1x3.</p>
+
+<p>·Conecte la salida del filtro FP2 a la entrada del filtro
+FP3.</p>
+
+<p>·Agregue visualizadores<a href="tall9hgl.htm"><img src=
+"../images/bm251.gif" alt="" border="0"></a> a las salidas de FP1 y
+FP3.</p>
+
+<p>5- Cronometrando el tiempo de ejecución, conecte la imagen
+remuestreada a FP1 y abra el visualizador. Repita el procedimiento
+conectando la imagen remuestreada a FP2 y abriendo el visualizador
+de FP3.</p>
+
+<p>Las dos imágenes resultantes, son idénticas? Para mayor
+convicción, efectúe una sustracción de estas imágenes<a href=
+"tall2fub.htm"><img src="../images/bm252.gif" alt="" border=
+"0"></a>.</p>
+
+<p>5. Explique la diferencia de los tiempos de ejecución
+determinando el número de operaciones elementales (SUMA, RESTA)
+efectuadas por las dos versiones del filtro.</p>
+
+<p>6. Calcule la duración de ejecución que se debería obtener con
+un filtro promedio 100 veces más grande (es decir de tamaño 30x30).
+Verifique este resultado experimentalmente (<b>para el filtro
+separable únicamente</b>) e intente explicar el tiempo de cálculo
+observado (pensando en los métodos de optimización utilizables con
+el filtro promedio separable).</p>
+
+<p>7. Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm253.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm254.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

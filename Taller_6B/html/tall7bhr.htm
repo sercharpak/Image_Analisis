@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Laplaciano de una imagen</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall7bhr.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="150m3no"></a>Laplaciano <a href=
+"tall2t6e.htm"><img src="../images/bm217.gif" alt="" border=
+"0"></a></h1>
+
+<p>Imágenes de trabajo: <a href="tall6smw.htm"><b>spot.png</b></a>,
+<a href="tall16w2.htm"><b>bruit.png</b></a>, <a href=
+"tall4gc1.htm"><b>film.png</b></a></p>
+
+<p>El laplaciano es la suma de las derivadas parciales de segundo
+orden de la imagen en las direcciones x y y.</p>
+
+<p>Este filtro presenta dos aplicaciones principales:</p>
+
+<p>- la presencia de un contorno provoca un cruce por cero (cambio
+de signo) del laplaciano.</p>
+
+<p>- cuando se combina con la imagen inicial, permite realzar los
+contornos, y por lo tanto mejorar el aspecto visual de una
+imagen.</p>
+
+<p>Ejercicio 1:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm218.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm219.gif" alt="" border=
+"0"></a>. Abra la imagen <b>spot.png.</b> Aplique el filtro
+laplaciano (Laplacian of a Gaussian LoG)<a href=
+"tall76eq.htm"><img src="../images/bm220.gif" alt="" border=
+"0"></a> con Kernel Extent = 1 y Sigma = 0.5. Visualice el
+resultado<a href="tall9hgl.htm"><img src="../images/bm221.gif" alt=
+"" border="0"></a>. Cómo es la respuesta del LoG en las regiones
+homogéneas de la imagen y en los contornos? A qué se debe este
+resultado?</p>
+
+<p>3- Modifique los valores de los parámetros del LoG de la
+siguiente manera: Kernel Extent=2, Sigma = 2). Comente el
+resultado.</p>
+
+<p>4- Abra la imagen <b>bruit</b><a href="tall00x7.htm"><img src=
+"../images/bm222.gif" alt="" border="0"></a> y visualícela<a href=
+"tall9hgl.htm"><img src="../images/bm223.gif" alt="" border=
+"0"></a>. Aplique el operador LoG<a href="tall76eq.htm"><img src=
+"../images/bm224.gif" alt="" border="0"></a> y visualice el
+resultado. Configure el LoG con Kernel Extent = 1 y Sigma =
+0.5.</p>
+
+<p>5- Calcule sobre la misma imagen <b>bruit</b> la norma del
+gradiente utilizando el operador de Sobel (ver primer punto de este
+taller). Para una mejor visualización, calibre el histograma de las
+imágenes resultantes<a href="tall24q0.htm"><img src=
+"../images/bm225.gif" alt="" border="0"></a>. En cuál de las dos
+imágenes es más fácil detectar los contornos. Por qué ?</p>
+
+<p>Ejercicio 2:</p>
+
+<p>1- Abra la imagen <b>film.png</b><a href=
+"tall00x7.htm"><img src="../images/bm226.gif" alt="" border=
+"0"></a> y visualícela<a href="tall9hgl.htm"><img src=
+"../images/bm227.gif" alt="" border="0"></a>.</p>
+
+<p>2- Calcule el LoG<a href="tall76eq.htm"><img src=
+"../images/bm228.gif" alt="" border="0"></a> (Kernel Extent = 1
+Sigma = 0.5).</p>
+
+<p>3- Combine la imagen resultado del LoG con 60% de la imagen
+inicial. Esto quiere decir multiplicar la imagen original por el
+valor 0.6 y sumarla a la imagen del LoG<i>.</i> Utilice para esto
+los módulos Arithmetic1<a href="tall9yt5.htm"><img src=
+"../images/bm229.gif" alt="" border="0"></a> y Arithmetic2<a href=
+"tall2fub.htm"><img src="../images/bm230.gif" alt="" border=
+"0"></a>.</p>
+
+<p>4- Para acentuar el interés del procesamiento, efectúe una
+ecualización del histograma<a href="tall0p7t.htm"><img src=
+"../images/bm231.gif" alt="" border="0"></a> de la imagen original
+y de la imagen combinada. Visualice el resultado<a href=
+"tall9hgl.htm"><img src="../images/bm232.gif" alt="" border=
+"0"></a>. Conclusión?</p>
+
+<p>5- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm233.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm234.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

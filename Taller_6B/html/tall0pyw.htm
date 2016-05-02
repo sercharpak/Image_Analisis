@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Umbralización por histéresis et bi-umbralización</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall0pyw.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="16der4x"></a>Umbralización doble <a href=
+"tall3h85.htm"><img src="../images/bm164.gif" alt="" border=
+"0"></a></h1>
+
+<p>Imágenes de trabajo: <a href="tall7n6r.htm"><b>rondelle.
+png</b></a><b>, angio.png</b></p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm165.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red dos módulos ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm166.gif" alt="" border=
+"0"></a>. Abra las imágenes <b>rondelle.png</b> y <b>angio.png.</b>
+Visualícelas<a href="tall9hgl.htm"><img src="../images/bm167.gif"
+alt="" border="0"></a>.</p>
+
+<p>3- Añada dos módulos de umbralización IntervalThresh<a href=
+"tall07lc.htm"><img src="../images/bm168.gif" alt="" border=
+"0"></a>. Conecte la salida de cada ImageLoad a la entrada de cada
+IntervalThresh. Añada dos nuevos módulos de visualización<a href=
+"tall9hgl.htm"><img src="../images/bm169.gif" alt="" border=
+"0"></a> y conéctelos a las salidas de cada módulo
+IntervalThresh.</p>
+
+<p>4- Se desea aplicar una <b>umbralización</b> <b>doble</b>. La
+imagen resultante debe contener tres clases, cuyos niveles de gris
+son 0, 128 y 255 respectivamente. Para esto se debe hacer uso de
+los siguientes campos del módulo IntervalThresh:</p>
+
+<p>·Threshold Interval - Min: Permite definir el umbral
+inferior.</p>
+
+<p>·Threshold Interval - Max: Permite definir el umbral
+superior.</p>
+
+<p>·Fill values - Below: Especifica el valor de los voxeles de
+salida que se encuentren por debajo del umbral inferior.</p>
+
+<p>·Fill values - Inner: Especifica el valor de los voxeles de
+salida que se encuentren dentro del rango [min max] del umbral.</p>
+
+<p>·Fill values - Above: Especifica el valor de los voxeles de
+salida que se encuentren por encima del umbral superior.</p>
+
+<p>·Nota: Los límites del umbral [min max] también pueden ser
+controlados a través de los parámetros center y width.
+Específicamente, Min = center - width / 2 y Max = center + width /
+2.</p>
+
+<p>5- Evalúe sobre las imágenes de trabajo <b>rondelle.png</b> y
+<b>angio.png</b>, utilizando como umbrales bajo y alto los valores
+70 y 140 respectivamente. Visualice el resultado.</p>
+
+<p>6- Deduzca de estos ejemplos el rol y las condiciones de
+utilización de la umbralización doble. Cómo es el comportamiento
+(ventajas y desventajas) con respecto a: conectividad, extracción
+de objetos de formas complejas o ramificadas y calidad de los
+contornos o fronteras de los objetos extraídos.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

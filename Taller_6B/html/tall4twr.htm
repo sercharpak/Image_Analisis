@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+
+<title>Esqueletización y reducción</title>
+<link rel="stylesheet" href="../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../default.css" type="text/css">
+
+<script type="text/JavaScript" src="../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "html/tall4twr.htm";
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<!-- !chm2web! -->
+
+<h1><a name="2o5sz6k"></a>Esqueleto y adelgazamiento de una
+imagen<a href="tall6rqb.htm"><img src="../images/bm326.gif" alt=""
+border="0"></a></h1>
+
+<p>Imágenes de trabajo: <a href="tall3kin.htm"><b>angio.png</b></a>
+y <a href="tall1gxk.htm"><b>rect.png</b></a></p>
+
+<p>Las operaciones de esqueletización y de adelgazamiento permiten
+obtener una representación filiforme de un objeto. Estas son sin
+embargo sensibles al ruido.</p>
+
+<p>Ejercicio:</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm327.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm328.gif" alt="" border=
+"0"></a>. Abra la imagen <b>rect.png</b>.</p>
+
+<p>3- Efectúe la esqueletización<a href="tall1j5h.htm"><img src=
+"../images/bm329.gif" alt="" border="0"></a> de esta imagen y visualice el resultado.
+Consultando la documentación del módulo DTFSkeletonization,
+explique cómo se lleva a cabo esta operación de esqueletización y a
+qué corresponde el esqueleto de los objetos. Cuál es el resultado
+si no se selecciona la opción Skeleton Only de este módulo? A qué
+corresponden los niveles de gris de los píxeles en este caso?</p>
+
+<p>4- Efectúe un adelgazamiento<a href="tall908f.htm"><img src=
+"../images/bm330.gif" alt="" border="0"></a> de la imagen original.
+Puede efectuar una calibración del histograma<a href=
+"tall24q0.htm"><img src="../images/bm331.gif" alt="" border=
+"0"></a> de la imagen obtenida para visualizar mejor el resultado.
+Compare el resultado con el de la esqueletización.</p>
+
+<p>5- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm332.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm333.gif" alt="" border=
+"0"></a>.</p>
+
+<p>Después de este ejemplo sobre una imagen de síntesis, usted
+aplicará las mismas operaciones sobre una imagen real.</p>
+
+<p>1- Cree una nueva red en MeVisLab<a href=
+"tall5m8z.htm"><img src="../images/bm334.gif" alt="" border=
+"0"></a>.</p>
+
+<p>2- Añada a esta red un módulo ImageLoad<a href=
+"tall00x7.htm"><img src="../images/bm335.gif" alt="" border=
+"0"></a>. Abra la imagen <b>angio.png</b>.</p>
+
+<p>3- Umbralice la imagen utilizando el algoritmo de OTSU<a href=
+"tall3bav.htm"><img src="../images/bm336.gif" alt="" border=
+"0"></a>, después fíltrela efectuando un cierre<a href=
+"tall9im0.htm"><img src="../images/bm337.gif" alt="" border=
+"0"></a> y una apertura<a href="tall097o.htm"><img src=
+"../images/bm338.gif" alt="" border="0"></a> de la imagen, con una
+máscara en cruz de 3x3<a href="tall4y5w.htm"><img src=
+"../images/bm339.gif" alt="" border="0"></a>. Efectúe una calibración del histograma<a href=
+"tall24q0.htm"><img src="../images/bm331.gif" alt="" border=
+"0"></a> de la imagen obtenida para dejarla en la escala 0-255.</p>
+
+<p>4- Efectúe su esqueletización<a href="tall1j5h.htm"><img src=
+"../images/bm340.gif" alt="" border="0"></a> y su
+adelgazamiento<a href="tall908f.htm"><img src="../images/bm341.gif"
+alt="" border="0"></a>. Compare los resultados de estos dos
+tratamientos?</p>
+
+<p>5- Sobreponga la imagen adelgazada a la imagen <b>angio.png</b>
+(calculando el máximo<a href="tall3mnb.htm"><img src=
+"../images/bm342.gif" alt="" border="0"></a> entre las dos
+imágenes) para observar la localización de las líneas con respecto
+a la imagen inicial.</p>
+
+<p>6- Guarde la red<a href="tall19di.htm"><img src=
+"../images/bm343.gif" alt="" border="0"></a> y cierre<a href=
+"tall62cj.htm"><img src="../images/bm344.gif" alt="" border=
+"0"></a>.</p>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Pro 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>
