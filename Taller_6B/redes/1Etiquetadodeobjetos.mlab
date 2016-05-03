@@ -2,273 +2,301 @@
 network  {
   watchlist = ""
 }
-module SoView2DMarkerEditor {
+module Scale {
   internal  {
-    frame = "657 -1643 160 56"
+    frame = "433 -1987 64 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "545 216 620 679"
-        sizeHint = "605 679"
+        geometry = "908 234 256 354"
+        sizeHint = "256 354"
         wasOpen = no
       }
     }
   }
   fields  {
-    instanceName = SoView2DMarkerEditor
-    interactionProviderID = ""
-    drawingOn = TRUE
-    editingOn = TRUE
-    fixZOn = TRUE
-    color = "0 0 1"
-    selectionTolerance = 4
-    needsValidVoxel = TRUE
-    button1 = PRESSED
-    button2 = IGNORED
-    button3 = IGNORED
-    shift = IGNORED
-    control = IGNORED
-    alt = IGNORED
-    wantsAllEvents = FALSE
-    wantsKeyEvents = TRUE
-    wantsMouseWheelEvents = FALSE
-    setEventHandled = FALSE
-    ignoreHandledEvents = FALSE
-    createNewMode = FALSE
-    renderOnSlab = FALSE
-    clipToSlice = FALSE
-    cursorShape = UNDEFINED_CURSOR
-    depthVisibility = 1
-    snapToVoxel = TRUE
-    snapToSlice = TRUE
-    currentType = 0
-    deleteOnClick = FALSE
-    addOnClick = TRUE
-    alphaFactor = 1
-    minimumAlpha = 0.1
-    iconFile = $(MLAB_MeVisLab_Standard)/Modules/Resources/Images/markerIcons.tif
-    useIconFile = FALSE
-    iconIdx = 0
-    drawMarkerShapesWithLines = FALSE
-    selectingOn = TRUE
-    actOnReleaseOnly = FALSE
-    editorMode = EDIT_MARKER
-    colorMode = COLOR_BY_TYPE
-    textColorMode = COLOR_TEXT
-    textMode = TEXT_OFF
-    textPosition = TEXT_POSITION_RIGHT_BELOW
-    textColor = "1 1 1"
-    textShadow = TRUE
-    textFontSize = 12
-    showTextOnlyForSelectedMarker = FALSE
-    cutText = FALSE
-    maxNumberOfLines = 1
-    vectorArrow = VECTOR_END_ARROW
-    vectorLineWidth = 1
-    useAntiAlias = TRUE
-    useVectorLengthAsMarkerSize = FALSE
-    depthVectorDrawMode = DRAW_HIGHLIGHT_SLICE_SEGMENT
-    drawMode = DRAW_MARKER
-    highlightSelection = TRUE
-    selectiveDrawing = FALSE
-    selectionBoxesForCurrentOnly = FALSE
-    cooperative = FALSE
-    overwriteCurrentTimePoint = FALSE
-    newCurrentTimePoint = 0
-    depthVisibilityMode = DEPTH_IN_SLICES
-    listString = ""
-    index = 1
-    persistent = FALSE
-    listStringEnable = FALSE
-    applySelect = FALSE
-    name = ""
-    newName = ""
-    overflowMode = None
-    maxSize = 0
-    useInsertTemplate = FALSE
-    posXYZ = "17.4603176116943 17.4603176116943 0.5"
-    posC = 0
-    posT = 0
-    posU = 0
-    vecXYZ = "0 0 0"
-    type = 0
-    newPosXYZ = "0 0 0"
-    newPosC = 0
-    newPosT = 0
-    newPosU = 0
-    newVecXYZ = "0 0 0"
-    newType = 0
+    instanceName = Scale
+    inputMin = 1
+    inputMax = 19
+    updateMode = AutoUpdateMinMaxOn
+    useTrueRange = TRUE
+    typeSelect = Automatic
+    outputMin = 0
+    outputMax = 255
   }
 }
-module ComputeConnectedComponents {
+module Histogram {
   internal  {
-    frame = "441 -1699 208 56"
+    frame = "249 -2123 96 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "648 395 415 266"
-        sizeHint = "363 266"
+        geometry = "138 169 435 396"
+        sizeHint = "435 396"
         wasOpen = no
       }
     }
   }
   fields  {
-    instanceName = ComputeConnectedComponents
-    updateMode = AutoUpdate
-    neighborhoodRelation = NBH_2D_8_XY
-    backgroundValue = 0
-    useBackgroundValue = TRUE
+    instanceName = Histogram1
     useMask = FALSE
-    clusterMode = IdenticalIntensities
-    similarityToleranceIntensities = 0
-    similarityToleranceVectors = 0.98
-  }
-}
-module FilterConnectedComponents {
-  internal  {
-    frame = "457 -1811 192 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "643 451 350 207"
-        sizeHint = "350 207"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = FilterConnectedComponents1
+    xRange = "Dynamic Min/Max"
+    maskMode = Labels
+    curveType = Line
+    curveStyle = 0
+    curveTitle = ""
     updateMode = AutoUpdate
-    minClusterSize = 0
-    maxClusterSize = -1
-    clusterSizeInterpretation = Voxels
-    shouldInvertSelection = FALSE
-    selectionMode = SelectedByCoordinates
-  }
-}
-module ConnectedComponentsToImage {
-  internal  {
-    frame = "445 -1915 216 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "1112 530 370 144"
-        sizeHint = "370 144"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = ConnectedComponentsToImage1
-    updateMode = AutoUpdate
-    writeToImageMode = FixedValues
-    clusterValue = 255
+    useStepFunction = FALSE
+    useBinSizeOneRepresentation = TRUE
+    useBackgroundValue = TRUE
     backgroundValue = 0
+    binSize = 1
+    maxBinCount = 25000000
   }
 }
-module ConnectedComponentsInfo {
+module StylePalette {
   internal  {
-    frame = "877 -1859 184 56"
+    frame = "349 -2123 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1089 297 493 331"
-        sizeHint = "493 331"
+        geometry = "70 89 632 433"
+        sizeHint = "632 433"
         wasOpen = no
       }
     }
   }
   fields  {
-    instanceName = ConnectedComponentsInfo
-    updateMode = AutoUpdate
-    selectInfoClusterByVoxelPosition = "10 14 0"
+    instanceName = StylePalette0
+    color1 = "1 1 0"
+    color2 = "1 0 0"
+    color3 = "0 0 1"
+    color4 = "0 1 0"
+    color5 = "1 0.5 0"
+    color6 = "1 0 1"
+    color7 = "0 1 1"
+    color8 = "0.5 1 0.5"
+    color9 = "1 0 0.5"
+    color10 = "0.5 1 0"
+    color11 = "0.5 0 1"
+    color12 = "0 1 0.5"
+    lineStyle1 = Solid
+    lineStyle2 = Solid
+    lineStyle3 = Solid
+    lineStyle4 = Solid
+    lineStyle5 = Solid
+    lineStyle6 = Solid
+    lineStyle7 = Solid
+    lineStyle8 = Solid
+    lineStyle9 = Solid
+    lineStyle10 = Solid
+    lineStyle11 = Solid
+    lineStyle12 = Solid
+    lineWidth1 = 1
+    lineWidth2 = 1
+    lineWidth3 = 1
+    lineWidth4 = 1
+    lineWidth5 = 1
+    lineWidth6 = 1
+    lineWidth7 = 1
+    lineWidth8 = 1
+    lineWidth9 = 1
+    lineWidth10 = 1
+    lineWidth11 = 1
+    lineWidth12 = 1
+    markerType1 = None
+    markerType2 = None
+    markerType3 = None
+    markerType4 = None
+    markerType5 = None
+    markerType6 = None
+    markerType7 = None
+    markerType8 = None
+    markerType9 = None
+    markerType10 = None
+    markerType11 = None
+    markerType12 = None
+    markerSize1 = 10
+    markerSize2 = 10
+    markerSize3 = 10
+    markerSize4 = 10
+    markerSize5 = 10
+    markerSize6 = 10
+    markerSize7 = 10
+    markerSize8 = 10
+    markerSize9 = 10
+    markerSize10 = 10
+    markerSize11 = 10
+    markerSize12 = 10
+    antiAlias1 = FALSE
+    antiAlias2 = FALSE
+    antiAlias3 = FALSE
+    antiAlias4 = FALSE
+    antiAlias5 = FALSE
+    antiAlias6 = FALSE
+    antiAlias7 = FALSE
+    antiAlias8 = FALSE
+    antiAlias9 = FALSE
+    antiAlias10 = FALSE
+    antiAlias11 = FALSE
+    antiAlias12 = FALSE
+    name1 = ""
+    name2 = ""
+    name3 = ""
+    name4 = ""
+    name5 = ""
+    name6 = ""
+    name7 = ""
+    name8 = ""
+    name9 = ""
+    name10 = ""
+    name11 = ""
+    name12 = ""
+    currentStyle = 0
+    currentColor = "1 1 1"
+    currentLineStyle = None
+    currentLineWidth = 1
+    currentMarkerType = None
+    currentMarkerSize = 4
+    currentAntiAlias = FALSE
+    currentName = ""
+    reservedEntries = 1
   }
 }
-module SoGroup {
+module SoRenderArea {
   internal  {
-    frame = "857 -1763 96 56"
+    frame = "257 -2339 112 56"
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "1111 333 400 400"
+        geometry = "313 291 412 344"
         sizeHint = "400 400"
         wasOpen = no
       }
     }
   }
   fields  {
-    instanceName = SoGroup
+    instanceName = SoRenderArea
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = DELAYED_BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    hiResRendering = TRUE
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
   }
 }
-module SoView2DOverlay {
+module SoDiagram2D {
   internal  {
-    frame = "813 -2011 136 56"
+    frame = "265 -2251 112 56"
     moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "971 329 436 386"
-        sizeHint = "436 386"
-        wasOpen = no
-      }
-    }
   }
   fields  {
-    instanceName = SoView2DOverlay
-    interactionProviderID = ""
-    drawingOn = TRUE
-    editingOn = TRUE
-    fixZOn = TRUE
-    color = "1 1 1"
-    selectionTolerance = 4
-    needsValidVoxel = TRUE
-    button1 = IGNORED
-    button2 = IGNORED
-    button3 = IGNORED
-    shift = IGNORED
-    control = IGNORED
-    alt = IGNORED
-    wantsAllEvents = TRUE
-    wantsKeyEvents = TRUE
-    wantsMouseWheelEvents = FALSE
-    setEventHandled = FALSE
-    ignoreHandledEvents = FALSE
-    createNewMode = FALSE
-    renderOnSlab = TRUE
-    clipToSlice = TRUE
-    cursorShape = UNDEFINED_CURSOR
-    cacheTextures = TRUE
-    blendMode = BLEND_BLEND
-    overwriteCurrentTimePoint = FALSE
-    timePoint = 0
-    maxTimePoint = 0
-    filterMode = FILTER_LINEAR
-    inheritFilterMode = TRUE
-    lutPrecision = VIEW2D_LUT_AUTO
-    alphaFactor = 0.5
-    baseColor = "1 0 0"
-    useWorldCoords = FALSE
-    applyLut = TRUE
-    isCheckerTiling = FALSE
-    checkerTileSize = 2
-    areCheckerTilesInverted = FALSE
+    instanceName = SoDiagram2D
+    minX = 14
+    maxX = 255
+    minY = 0
+    maxY = 843
+    scaleX = 1
+    scaleY = 1
+    autoRangeX = TRUE
+    autoRangeY = TRUE
+    axisColor = "1 1 1"
+    axisRotation = AXIS_ROTATION_LEFT_BOTTOM
+    titleFontHeight = 14
+    drawDiagramTitle = FALSE
+    diagramTitleString = ""
+    drawGrid = FALSE
+    gridColor = "0.349999994039536 0.349999994039536 0.349999994039536"
+    drawLegend = FALSE
+    legendPlacement = LEGEND_UPPER_RIGHT
+    legendFontHeight = 12
+    autoLimitLegendFontHeight = FALSE
+    zoomAnimationEase = 0.5
+    zoomAnimationEpsilon = 0.0099999998
+    useZoomRestrictions = FALSE
+    minZoomFactor = 0.1
+    maxZoomFactor = 10
+    drawChildrenExtensions = TRUE
+    forwardEventsToChildrenExtensions = TRUE
+    changeLineOpacityForHighlightedCurves = FALSE
+    curveLineOpacityHighlighted = 1
+    changeAreaOpacityForHighlightedCurves = FALSE
+    curveAreaOpacityHighlighted = 1
+    changeLineOpacityForNotHighlightedCurves = FALSE
+    curveLineOpacityNotHighlighted = 0.30000001
+    changeAreaOpacityForNotHighlightedCurves = FALSE
+    curveAreaOpacityNotHighlighted = 0.30000001
+    changeLineStyleForHighlightedCurves = FALSE
+    curveLineStyleHighlighted = 1
+    changeLineStyleForNotHighlightedCurves = FALSE
+    curveLineStyleNotHighlighted = 1
+    curveIndexHighlighted = ""
+    reorderHighlightedCurves = FALSE
+    borderH = 33
+    borderV = 27
+    autoBorderH = TRUE
+    autoBorderV = TRUE
+    drawAxisX = TRUE
+    drawAxisY = TRUE
+    drawTicksX = TRUE
+    drawTicksY = TRUE
+    drawLabelsX = TRUE
+    drawLabelsY = TRUE
+    drawAxisTitleX = FALSE
+    drawAxisTitleY = FALSE
+    axisTitleStringX = "X [dn]"
+    axisTitleStringY = "Y [dn]"
+    axisTitleFontHeightX = 12
+    axisTitleFontHeightY = 12
+    axisLabelFontHeightX = 12
+    axisLabelFontHeightY = 12
+    tickMinDistance = 30
+    curveColor = "1 1 1"
+    lineStyle = LINE_STYLE_SOLID
+    markerType = MARKER_TYPE_NONE
+    markerSize = 10
+    lineWidth = 1
+    antiAlias = TRUE
+    areaOpacity = 0.5
+    lineOpacity = 1
+    stylePaletteMode = STYLE_PALETTE_INDEX
   }
 }
 module View2D {
   internal  {
-    frame = "469 -2059 120 56"
+    frame = "549 -2123 120 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "166 319 400 400"
+        geometry = "322 305 400 400"
         sizeHint = "400 400"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
   fields  {
-    instanceName = View2D6
+    instanceName = View2D3
     inventorInputOn = TRUE
-    inventorOutputOn = TRUE
+    inventorOutputOn = FALSE
     view2DExtensionsOn = TRUE
     startSlice = 0
     numSlices = 1
@@ -295,11 +323,11 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 40.8000068664551
-    lutWidth = 232.687469482422
+    lutCenter = 1
+    lutWidth = 1
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
-    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationSizeMode = ANNO_SHOW_SHORT
     annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
     annotationFontSize = ANNO_SIZE_AUTO
     annoCoords = Voxel
@@ -313,9 +341,75 @@ module View2D {
     hiResRendering = TRUE
   }
 }
+module FilterConnectedComponents {
+  internal  {
+    frame = "369 -1819 192 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "194 683 302 207"
+        sizeHint = "302 207"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FilterConnectedComponents1
+    updateMode = AutoUpdate
+    minClusterSize = 0
+    maxClusterSize = -1
+    clusterSizeInterpretation = Voxels
+    shouldInvertSelection = FALSE
+    selectionMode = AllFiltered
+  }
+}
+module ComputeConnectedComponents {
+  internal  {
+    frame = "357 -1723 216 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "191 453 460 274"
+        sizeHint = "408 274"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComputeConnectedComponents2
+    updateMode = AutoUpdate
+    neighborhoodRelation = NBH_2D_8_XY
+    backgroundValue = 0
+    useBackgroundValue = TRUE
+    useMask = FALSE
+    clusterMode = IdenticalIntensities
+    similarityToleranceIntensities = 0
+    similarityToleranceVectors = 0.98
+  }
+}
+module ConnectedComponentsToImage {
+  internal  {
+    frame = "361 -1907 208 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "195 271 370 144"
+        sizeHint = "370 144"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ConnectedComponentsToImage
+    updateMode = AutoUpdate
+    writeToImageMode = Rank
+    clusterValue = 1
+    backgroundValue = 0
+  }
+}
 module KernelEditor {
   internal  {
-    frame = "537 -1355 112 56"
+    frame = "521 -1363 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -345,7 +439,7 @@ module KernelEditor {
 }
 module Morphology {
   internal  {
-    frame = "273 -1307 112 56"
+    frame = "257 -1315 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -384,7 +478,7 @@ module Morphology {
 }
 module Morphology {
   internal  {
-    frame = "281 -1403 112 56"
+    frame = "257 -1427 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -423,7 +517,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "545 -1451 112 56"
+    frame = "521 -1475 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -453,7 +547,7 @@ module KernelEditor {
 }
 module KernelEditor {
   internal  {
-    frame = "553 -1571 112 56"
+    frame = "521 -1595 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -483,7 +577,7 @@ module KernelEditor {
 }
 module Morphology {
   internal  {
-    frame = "289 -1523 112 56"
+    frame = "257 -1547 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -522,7 +616,7 @@ module Morphology {
 }
 module Morphology {
   internal  {
-    frame = "265 -1179 112 56"
+    frame = "257 -1195 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -561,7 +655,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "529 -1227 112 56"
+    frame = "521 -1243 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -591,7 +685,7 @@ module KernelEditor {
 }
 module KernelEditor {
   internal  {
-    frame = "521 -1107 112 56"
+    frame = "521 -1123 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -621,7 +715,7 @@ module KernelEditor {
 }
 module Morphology {
   internal  {
-    frame = "257 -1059 112 56"
+    frame = "257 -1075 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -660,7 +754,7 @@ module Morphology {
 }
 module Morphology {
   internal  {
-    frame = "249 -963 112 56"
+    frame = "257 -963 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -699,7 +793,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "513 -1011 112 56"
+    frame = "521 -1011 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -729,7 +823,7 @@ module KernelEditor {
 }
 module Morphology {
   internal  {
-    frame = "249 -819 112 56"
+    frame = "257 -835 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -768,7 +862,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "513 -867 112 56"
+    frame = "521 -883 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -798,7 +892,7 @@ module KernelEditor {
 }
 module Morphology {
   internal  {
-    frame = "273 -339 112 56"
+    frame = "257 -331 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -837,7 +931,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "537 -387 112 56"
+    frame = "521 -379 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -867,7 +961,7 @@ module KernelEditor {
 }
 module KernelEditor {
   internal  {
-    frame = "545 -499 112 56"
+    frame = "521 -507 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -897,7 +991,7 @@ module KernelEditor {
 }
 module Morphology {
   internal  {
-    frame = "281 -451 112 56"
+    frame = "257 -459 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -936,7 +1030,7 @@ module Morphology {
 }
 module Morphology {
   internal  {
-    frame = "273 -571 112 56"
+    frame = "257 -587 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -975,7 +1069,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "537 -619 112 56"
+    frame = "521 -635 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1005,7 +1099,7 @@ module KernelEditor {
 }
 module KernelEditor {
   internal  {
-    frame = "525 -731 104 56"
+    frame = "525 -755 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1035,7 +1129,7 @@ module KernelEditor {
 }
 module Morphology {
   internal  {
-    frame = "261 -683 104 56"
+    frame = "261 -707 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1074,7 +1168,7 @@ module Morphology {
 }
 module Morphology {
   internal  {
-    frame = "245 -187 104 56"
+    frame = "261 -195 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1113,7 +1207,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "509 -235 104 56"
+    frame = "525 -243 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1212,7 +1306,7 @@ module Morphology {
 }
 module Morphology {
   internal  {
-    frame = "269 45 104 56"
+    frame = "261 45 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1251,7 +1345,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "533 -3 104 56"
+    frame = "525 -3 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1348,82 +1442,13 @@ module Morphology {
     useExternalKernel = TRUE
   }
 }
-module KernelEditor {
-  internal  {
-    frame = "1125 -219 104 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "412 72 1048 796"
-        sizeHint = "407 796"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = KernelEditor4
-    kernelX = 3
-    kernelY = 3
-    kernelZ = 1
-    kernelC = 1
-    kernelT = 1
-    kernelU = 1
-    fieldWidth = 10
-    precision = 6
-    value = 0
-    kernel = "(*,0,0,0,0,0):    1.000000,          ,          
-(*,1,0,0,0,0):            ,  1.000000,          
-(*,2,0,0,0,0):            ,          ,  1.000000
-
-"
-  }
-}
-module Morphology {
-  internal  {
-    frame = "861 -171 104 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = Morphology4
-    borderHandling = PadSrcClamp
-    fillValue = 0
-    referenceExtentMode = Overlap
-    filterMode = Erosion
-    kernelX = 29
-    kernelY = 29
-    kernelZ = 1
-    kernelC = 1
-    kernelT = 1
-    kernelU = 1
-    makeSpherical = FALSE
-    intervalMinOfFilteredVoxels = 0
-    intervalMaxOfFilteredVoxels = 1024
-    useIntervalOfFilteredVoxels = FALSE
-    intervalMinOfVoxelsForFiltering = 0
-    intervalMaxOfVoxelsForFiltering = 1024
-    useIntervalOfVoxelsForFiltering = FALSE
-    externalKernel = "(*,0,0,0,0,0):    1.000000,          ,          
-(*,1,0,0,0,0):            ,  1.000000,          
-(*,2,0,0,0,0):            ,          ,  1.000000
-
-"
-    useExternalKernel = TRUE
-  }
-}
 module View2D {
   internal  {
-    frame = "149 -1675 120 56"
+    frame = "85 -1851 120 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "346 358 400 400"
+        geometry = "334 370 398 398"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1459,8 +1484,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 0
-    lutWidth = 1
+    lutCenter = 120.5
+    lutWidth = 273
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1484,8 +1509,8 @@ module Threshold {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "723 408 278 294"
-        sizeHint = "248 294"
+        geometry = "723 436 307 313"
+        sizeHint = "271 313"
         wasOpen = no
       }
     }
@@ -1503,7 +1528,7 @@ module Threshold {
 }
 module Morphology {
   internal  {
-    frame = "221 269 104 56"
+    frame = "261 261 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1542,7 +1567,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "485 221 104 56"
+    frame = "525 213 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1572,7 +1597,7 @@ module KernelEditor {
 }
 module KernelEditor {
   internal  {
-    frame = "461 341 104 56"
+    frame = "405 357 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1645,9 +1670,9 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "567 724 400 400"
+        geometry = "482 211 400 400"
         sizeHint = "400 400"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -1681,8 +1706,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 2.3125
-    lutWidth = 0.00749999983236194
+    lutCenter = 128.5
+    lutWidth = 257
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1740,7 +1765,7 @@ module Morphology {
 }
 module KernelEditor {
   internal  {
-    frame = "397 461 104 56"
+    frame = "405 461 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -1774,7 +1799,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "791 173 400 400"
+        geometry = "791 229 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1810,8 +1835,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 0.5
-    lutWidth = 1
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1834,9 +1859,9 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "172 356 400 400"
+        geometry = "595 368 400 400"
         sizeHint = "400 400"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -1902,7 +1927,7 @@ module ImageLoad {
   }
   fields  {
     instanceName = ImageLoad
-    filename = "//CODD.sis.virtual.uniandes.edu.co/Estudiantes/Profiles/jf.molano1587/Downloads/undecimosemestre/imagenes/Taller6B/images/ejercicios/SIC.png"
+    filename = /home/jfm/Dropbox/undecimosemestre/imagenes/Taller6B/SIC.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1
@@ -1922,15 +1947,15 @@ module ImageLoad {
   }
 }
 connections  {
-  ComputeConnectedComponents.input0 = Morphology17.output0
-  FilterConnectedComponents1.inClusters = ComputeConnectedComponents.outClusters
-  FilterConnectedComponents1.inMarkerList = SoView2DMarkerEditor.outXMarkerList
-  ConnectedComponentsToImage1.inClusters = FilterConnectedComponents1.outClusters
-  ConnectedComponentsInfo.inClusters = FilterConnectedComponents1.outClusters
-  SoGroup.children = "SoView2DMarkerEditor.self SoView2DOverlay.self"
-  SoView2DOverlay.image = ConnectedComponentsToImage1.output0
-  View2D6.inImage = ConnectedComponentsToImage1.output0
-  View2D6.inInvPreLUT = SoGroup.self
+  Scale.input0 = ConnectedComponentsToImage.output0
+  Histogram1.input0 = Scale.output0
+  SoRenderArea.children = SoDiagram2D.self
+  SoDiagram2D.inCurveList = Histogram1.outputHistogramCurve
+  SoDiagram2D.inStylePalette = StylePalette0.outStylePalette
+  View2D3.inImage = Scale.output0
+  FilterConnectedComponents1.inClusters = ComputeConnectedComponents2.outClusters
+  ComputeConnectedComponents2.input0 = Morphology17.output0
+  ConnectedComponentsToImage.inClusters = FilterConnectedComponents1.outClusters
   Morphology19.input0 = Morphology16.output0
   Morphology19.externalKernel = KernelEditor19.kernel
   Morphology18.input0 = Morphology19.output0
@@ -1961,7 +1986,6 @@ connections  {
   Morphology6.externalKernel = KernelEditor6.kernel
   Morphology5.input0 = Morphology3.output0
   Morphology5.externalKernel = KernelEditor5.kernel
-  Morphology4.externalKernel = KernelEditor4.kernel
   View2D2.inImage = Morphology17.output0
   Threshold.input0 = ImageLoad.output0
   Morphology3.input0 = Morphology1.output0

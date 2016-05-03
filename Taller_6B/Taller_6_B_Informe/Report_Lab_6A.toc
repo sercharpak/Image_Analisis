@@ -1,0 +1,7 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Etiquetado de objetos}{2}{section.1}
+\contentsline {section}{\numberline {2}Imagen de distancia}{5}{section.2}
+\contentsline {section}{\numberline {3}Esqueleto y adelgazamiento de una imagen}{7}{section.3}
+\contentsline {section}{\numberline {4}Ejercicios de S\'{i}ntesis}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Ejercicio 1}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Ejercicio 3}{15}{subsection.4.2}

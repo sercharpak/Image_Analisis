@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{esqueletoMevis}
+D.~MeVisLab, 2016.
+
+\bibitem{esqueleto}
+D.~Selle, B.~Preim, A.~Schenk, and H.~O. Peitgen.
+\newblock Analysis of vasculature for liver surgical planning.
+\newblock {\em IEEE Transactions on Medical Imaging}, 21(11):1344--1357, Nov
+  2002.
+
+\end{thebibliography}
