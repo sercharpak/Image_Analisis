@@ -8,7 +8,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "606 165 400 400"
+        geometry = "606 193 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -44,7 +44,7 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 128.5
+    lutCenter = 127.5
     lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
@@ -89,7 +89,7 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 243 327 525"
+        geometry = "986 271 327 525"
         sizeHint = "327 525"
         wasOpen = no
       }
@@ -128,7 +128,7 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "316 59 1050 716"
+        geometry = "316 87 1050 737"
         sizeHint = "409 835"
         wasOpen = no
       }
@@ -158,7 +158,7 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "316 59 1050 716"
+        geometry = "316 87 1050 737"
         sizeHint = "409 835"
         wasOpen = no
       }
@@ -266,7 +266,7 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "316 59 1050 716"
+        geometry = "316 87 1050 737"
         sizeHint = "409 835"
         wasOpen = no
       }
@@ -296,7 +296,7 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "316 59 1050 716"
+        geometry = "316 87 1050 737"
         sizeHint = "409 835"
         wasOpen = no
       }
@@ -326,7 +326,7 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 243 327 525"
+        geometry = "986 299 327 525"
         sizeHint = "327 525"
         wasOpen = no
       }
@@ -365,7 +365,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "415 178 400 400"
+        geometry = "415 234 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -448,7 +448,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "256 205 400 400"
+        geometry = "256 233 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -508,7 +508,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "612 209 400 400"
+        geometry = "612 265 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -566,6 +566,13 @@ module itkOtsuMultipleThresholdsImageFilter {
   internal  {
     frame = "1109 1253 232 56"
     moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "655 277 288 401"
+        sizeHint = "288 401"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = itkOtsuMultipleThresholdsImageFilter
@@ -594,7 +601,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "390 180 400 400"
+        geometry = "390 208 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -654,7 +661,7 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "516 311 332 369"
+        geometry = "516 339 332 369"
         sizeHint = "332 369"
         wasOpen = no
       }
@@ -662,7 +669,7 @@ module ImageLoad {
   }
   fields  {
     instanceName = ImageLoad2
-    filename = /home/jfm/Dropbox/undecimosemestre/imagenes/Taller6B/ANGIO.png
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_6B/images/ejercicios/ANGIO.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1
@@ -688,7 +695,7 @@ module DtfSkeletonization {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "498 298 371 338"
+        geometry = "498 326 371 338"
         sizeHint = "368 338"
         wasOpen = no
       }
@@ -712,7 +719,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "221 220 400 400"
+        geometry = "221 248 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -772,7 +779,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "308 149 400 400"
+        geometry = "308 177 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -855,6 +862,13 @@ module itkBinaryThinningImageFilter {
   internal  {
     frame = "1457 541 192 56"
     moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "657 350 285 254"
+        sizeHint = "285 254"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = itkBinaryThinningImageFilter1
@@ -879,7 +893,7 @@ module Scale {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "554 262 256 354"
+        geometry = "554 290 256 354"
         sizeHint = "256 354"
         wasOpen = no
       }
@@ -902,7 +916,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "371 187 400 400"
+        geometry = "371 243 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -962,7 +976,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "483 164 400 400"
+        geometry = "483 192 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1043,6 +1057,13 @@ module itkBinaryThinningImageFilter {
   internal  {
     frame = "549 781 184 56"
     moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "657 350 285 254"
+        sizeHint = "285 254"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = itkBinaryThinningImageFilter
@@ -1068,7 +1089,7 @@ module DtfSkeletonization {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "498 326 371 338"
+        geometry = "498 354 371 338"
         sizeHint = "368 338"
         wasOpen = no
       }
@@ -1092,7 +1113,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "459 169 400 400"
+        geometry = "459 197 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1152,7 +1173,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "171 176 400 400"
+        geometry = "171 232 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1213,7 +1234,7 @@ module DtfSkeletonization {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "498 270 371 338"
+        geometry = "498 298 371 338"
         sizeHint = "368 338"
         wasOpen = no
       }
@@ -1237,7 +1258,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "463 279 400 400"
+        geometry = "160 235 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1297,7 +1318,7 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "516 255 332 369"
+        geometry = "516 283 332 369"
         sizeHint = "332 369"
         wasOpen = no
       }
@@ -1305,7 +1326,7 @@ module ImageLoad {
   }
   fields  {
     instanceName = ImageLoad
-    filename = /home/jfm/Dropbox/undecimosemestre/imagenes/Taller6B/RECT.png
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_6B/images/ejercicios/RECT.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1

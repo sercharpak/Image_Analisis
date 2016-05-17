@@ -46,7 +46,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "629 232 400 400"
+        geometry = "629 260 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -106,7 +106,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "629 232 400 400"
+        geometry = "629 260 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -167,8 +167,8 @@ module Rank {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "701 306 293 498"
-        sizeHint = "293 498"
+        geometry = "701 334 327 526"
+        sizeHint = "327 526"
         wasOpen = no
       }
     }
@@ -302,7 +302,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "629 232 400 400"
+        geometry = "629 260 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -400,7 +400,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "516 342 400 400"
+        geometry = "516 370 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -460,7 +460,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "858 112 400 400"
+        geometry = "858 140 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -520,7 +520,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -580,7 +580,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -640,7 +640,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "855 197 400 400"
+        geometry = "855 225 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -760,15 +760,15 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "692 377 311 357"
-        sizeHint = "311 357"
+        geometry = "692 405 332 369"
+        sizeHint = "332 369"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = ImageLoad1
-    filename = "//CODD.sis.virtual.uniandes.edu.co/Estudiantes/Profiles/jf.molano1587/Downloads/undecimosemestre/imagenes/Taller5/images/ejercicios/FISSURE.png"
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_5/images/ejercicios/FISSURE.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1
@@ -793,7 +793,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -853,8 +853,8 @@ module AddNoise {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "396 483 387 215"
-        sizeHint = "353 215"
+        geometry = "396 511 432 232"
+        sizeHint = "398 232"
         wasOpen = no
       }
     }
@@ -909,7 +909,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "672 316 400 400"
+        geometry = "672 372 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1009,7 +1009,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "264 406 400 400"
+        geometry = "264 462 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1069,7 +1069,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1105,8 +1105,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 97.5374603271484
-    lutWidth = 236.512496948242
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1168,8 +1168,8 @@ module Rank {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "701 306 293 498"
-        sizeHint = "293 498"
+        geometry = "701 334 327 526"
+        sizeHint = "327 526"
         wasOpen = no
       }
     }
@@ -1205,7 +1205,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1303,7 +1303,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1401,7 +1401,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1461,7 +1461,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1559,7 +1559,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1657,7 +1657,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1756,8 +1756,8 @@ module Rank {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "701 306 293 498"
-        sizeHint = "293 498"
+        geometry = "701 334 327 526"
+        sizeHint = "327 526"
         wasOpen = no
       }
     }
@@ -1853,7 +1853,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "693 365 400 400"
+        geometry = "693 393 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1913,8 +1913,8 @@ module Sigma {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "635 333 424 444"
-        sizeHint = "424 444"
+        geometry = "635 361 478 470"
+        sizeHint = "478 470"
         wasOpen = no
       }
     }
@@ -1983,8 +1983,8 @@ module AddNoise {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "539 413 387 215"
-        sizeHint = "353 215"
+        geometry = "539 441 432 232"
+        sizeHint = "398 232"
         wasOpen = no
       }
     }
@@ -2009,8 +2009,8 @@ module AddNoise {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "539 413 387 215"
-        sizeHint = "353 215"
+        geometry = "539 441 432 232"
+        sizeHint = "398 232"
         wasOpen = no
       }
     }
@@ -2889,7 +2889,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "218 281 400 400"
+        geometry = "218 309 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -2925,8 +2925,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 120.212516784668
-    lutWidth = 201.449981689453
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -3049,7 +3049,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "301 356 400 400"
+        geometry = "301 384 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -3139,8 +3139,8 @@ module AddNoise {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "396 483 387 215"
-        sizeHint = "353 215"
+        geometry = "396 511 432 232"
+        sizeHint = "398 232"
         wasOpen = no
       }
     }
@@ -3225,15 +3225,15 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "692 377 311 357"
-        sizeHint = "311 357"
+        geometry = "692 405 332 369"
+        sizeHint = "332 369"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = ImageLoad
-    filename = "//CODD.sis.virtual.uniandes.edu.co/Estudiantes/Profiles/jf.molano1587/Downloads/undecimosemestre/imagenes/Taller5/images/ejercicios/MORPHO.png"
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_5/images/ejercicios/MORPHO.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1

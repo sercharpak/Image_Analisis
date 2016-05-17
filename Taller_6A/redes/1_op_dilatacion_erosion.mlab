@@ -138,7 +138,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "923 403 400 400"
+        geometry = "923 431 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -324,7 +324,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "604 409 400 400"
+        geometry = "604 437 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -405,7 +405,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "220 345 400 400"
+        geometry = "220 401 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -465,7 +465,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "452 343 400 400"
+        geometry = "452 371 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -501,7 +501,7 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 128
+    lutCenter = 127.5
     lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
@@ -546,7 +546,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "604 409 400 400"
+        geometry = "604 437 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -582,8 +582,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 1.06999945640564
-    lutWidth = 1.87000012397766
+    lutCenter = 127
+    lutWidth = 256
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -653,9 +653,9 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "625 137 1048 796"
-        sizeHint = "407 796"
-        wasOpen = yes
+        geometry = "550 65 1050 835"
+        sizeHint = "409 835"
+        wasOpen = no
       }
     }
   }
@@ -732,7 +732,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "923 403 400 400"
+        geometry = "923 431 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -768,8 +768,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 0.5
-    lutWidth = 1
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -863,8 +863,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 0.5
-    lutWidth = 1
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -922,7 +922,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 355 400 400"
+        geometry = "647 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1018,8 +1018,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 0.5
-    lutWidth = 1
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -1066,15 +1066,15 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "692 377 311 357"
-        sizeHint = "311 357"
+        geometry = "692 405 332 369"
+        sizeHint = "332 369"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = ImageLoad
-    filename = "//CODD.sis.virtual.uniandes.edu.co/Estudiantes/Profiles/jf.molano1587/Downloads/undecimosemestre/imagenes/tallermorfo/Taller6A/images/ejercicios/MORPHO.png"
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_6A/images/ejercicios/MORPHO.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1

@@ -8,7 +8,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "851 367 400 389"
+        geometry = "851 395 400 389"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -44,8 +44,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 7.01249980926514
-    lutWidth = 5.09999990463257
+    lutCenter = 24.8625164031982
+    lutWidth = 112.837524414062
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -112,7 +112,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "875 272 400 400"
+        geometry = "875 300 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -284,7 +284,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "240 397 400 400"
+        geometry = "240 425 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -422,7 +422,7 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "692 405 332 369"
+        geometry = "692 433 332 369"
         sizeHint = "332 369"
         wasOpen = no
       }

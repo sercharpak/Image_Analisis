@@ -52,7 +52,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1143 213 400 400"
+        geometry = "1143 269 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -88,8 +88,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 1
-    lutWidth = 1
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -150,8 +150,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -185,8 +185,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "344 202 293 497"
-        sizeHint = "293 497"
+        geometry = "344 230 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -266,7 +266,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "724 215 400 400"
+        geometry = "541 248 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -302,8 +302,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 59.6499862670898
-    lutWidth = 158.737457275391
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -326,7 +326,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "307 217 400 400"
+        geometry = "307 245 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -362,8 +362,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 62.4749946594238
-    lutWidth = 151.087463378906
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -673,8 +673,8 @@ module MLToVTKImage {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "44 308 364 166"
-        sizeHint = "235 166"
+        geometry = "65 336 360 186"
+        sizeHint = "231 186"
         wasOpen = no
       }
     }
@@ -833,15 +833,15 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "692 377 311 357"
-        sizeHint = "311 357"
+        geometry = "692 405 332 369"
+        sizeHint = "332 369"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = ImageLoad
-    filename = "//CODD.sis.virtual.uniandes.edu.co/Estudiantes/Profiles/jf.molano1587/Downloads/undecimosemestre/imagenes/tallermorfo/Taller6A/images/ejercicios/MEB.png"
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_6A/images/ejercicios/MEB.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1

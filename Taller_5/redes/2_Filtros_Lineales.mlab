@@ -8,7 +8,7 @@ module itkMeanImageFilter {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1533 410 285 314"
+        geometry = "657 320 285 314"
         sizeHint = "285 314"
         wasOpen = no
       }
@@ -38,7 +38,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "624 355 400 400"
+        geometry = "624 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -151,7 +151,7 @@ module ImageResample {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "715 472 294 281"
+        geometry = "715 500 294 281"
         sizeHint = "282 281"
         wasOpen = no
       }
@@ -178,7 +178,7 @@ module itkMeanImageFilter {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1218 431 285 314"
+        geometry = "1218 459 285 314"
         sizeHint = "285 314"
         wasOpen = no
       }
@@ -269,7 +269,7 @@ module StopWatch {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2160 109 439 334"
+        geometry = "580 310 439 334"
         sizeHint = "439 334"
         wasOpen = no
       }
@@ -289,7 +289,7 @@ module StopWatch {
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "1089 88 439 334"
+        geometry = "1089 116 439 334"
         sizeHint = "439 334"
         wasOpen = no
       }
@@ -308,7 +308,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "624 355 400 400"
+        geometry = "624 383 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -368,7 +368,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "264 322 400 400"
+        geometry = "264 350 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -404,8 +404,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = -107.10001373291
-    lutWidth = 393.975006103516
+    lutCenter = 5.10002613067627
+    lutWidth = 321.300048828125
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -562,11 +562,11 @@ module StylePalette {
 }
 module SoRenderArea {
   internal  {
-    frame = "693 -19 120 56"
+    frame = "693 -27 120 56"
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "1264 306 400 400"
+        geometry = "1200 334 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -705,7 +705,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1256 291 400 400"
+        geometry = "1200 319 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -765,7 +765,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "624 355 400 400"
+        geometry = "624 411 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -885,7 +885,7 @@ module ImageResample {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "715 472 294 281"
+        geometry = "715 528 294 281"
         sizeHint = "282 281"
         wasOpen = no
       }
@@ -903,7 +903,7 @@ module ImageResample {
     antiAliasingFilter = Linear
     borderHandling = Fill
     borderFillValue = 0
-    autoUpdate = FALSE
+    autoUpdate = TRUE
   }
 }
 module itkMeanImageFilter {
@@ -942,8 +942,8 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "692 377 311 357"
-        sizeHint = "311 357"
+        geometry = "692 405 332 369"
+        sizeHint = "332 369"
         wasOpen = no
       }
     }

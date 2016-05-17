@@ -169,7 +169,7 @@ module SoRenderArea {
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "313 291 412 344"
+        geometry = "313 319 412 344"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -208,6 +208,13 @@ module SoDiagram2D {
   internal  {
     frame = "265 -2251 112 56"
     moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "502 173 595 608"
+        sizeHint = "595 608"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = SoDiagram2D
@@ -287,7 +294,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "322 305 400 400"
+        geometry = "322 333 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -323,8 +330,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 1
-    lutWidth = 1
+    lutCenter = 127.5
+    lutWidth = 255
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_SHORT
@@ -369,7 +376,7 @@ module ComputeConnectedComponents {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "191 453 460 274"
+        geometry = "191 509 460 274"
         sizeHint = "408 274"
         wasOpen = no
       }
@@ -393,7 +400,7 @@ module ConnectedComponentsToImage {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "195 271 370 144"
+        geometry = "195 299 370 144"
         sizeHint = "370 144"
         wasOpen = no
       }
@@ -521,8 +528,8 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "412 72 1048 796"
-        sizeHint = "407 796"
+        geometry = "412 65 1050 835"
+        sizeHint = "409 835"
         wasOpen = no
       }
     }
@@ -551,8 +558,8 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "412 72 1048 796"
-        sizeHint = "407 796"
+        geometry = "412 65 1050 835"
+        sizeHint = "409 835"
         wasOpen = no
       }
     }
@@ -581,8 +588,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -758,8 +765,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -866,8 +873,8 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "412 72 1048 796"
-        sizeHint = "407 796"
+        geometry = "412 65 1050 835"
+        sizeHint = "409 835"
         wasOpen = no
       }
     }
@@ -1073,8 +1080,8 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "412 72 1048 796"
-        sizeHint = "407 796"
+        geometry = "412 65 1050 835"
+        sizeHint = "409 835"
         wasOpen = no
       }
     }
@@ -1271,8 +1278,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -1310,8 +1317,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -1409,8 +1416,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -1448,7 +1455,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "334 370 398 398"
+        geometry = "334 398 398 398"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1532,8 +1539,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -1601,8 +1608,8 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "412 72 1048 796"
-        sizeHint = "407 796"
+        geometry = "412 65 1050 835"
+        sizeHint = "409 835"
         wasOpen = no
       }
     }
@@ -1631,8 +1638,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -1670,7 +1677,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "482 211 400 400"
+        geometry = "482 295 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1730,8 +1737,8 @@ module Morphology {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "986 317 293 497"
-        sizeHint = "293 497"
+        geometry = "986 345 327 525"
+        sizeHint = "327 525"
         wasOpen = no
       }
     }
@@ -1769,8 +1776,8 @@ module KernelEditor {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "412 72 1048 796"
-        sizeHint = "407 796"
+        geometry = "412 65 1050 835"
+        sizeHint = "409 835"
         wasOpen = no
       }
     }
@@ -1799,7 +1806,7 @@ module View2D {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "791 229 400 400"
+        geometry = "791 285 400 400"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -1919,15 +1926,15 @@ module ImageLoad {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "692 377 311 357"
-        sizeHint = "311 357"
+        geometry = "692 405 332 369"
+        sizeHint = "332 369"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = ImageLoad
-    filename = /home/jfm/Dropbox/undecimosemestre/imagenes/Taller6B/SIC.png
+    filename = /home/shernand/Documents/2016-1/Imagenes/Image_Analisis/Taller_6B/images/ejercicios/SIC.png
     autoLoad = TRUE
     readRaw = FALSE
     rawX = 1
