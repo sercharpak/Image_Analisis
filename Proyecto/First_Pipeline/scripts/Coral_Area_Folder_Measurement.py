@@ -175,7 +175,7 @@ for file_input_image in fileset:
 	plt.ylabel("x(pixels)")
 	plt.close(fig)
 	"""
-	# Guardamos solo el objeto más grande luego del fondo
+	# Guardamos solo el objeto mas grande luego del fondo
 
 	hist, bins = np.histogram(etiquetas)
 	"""
