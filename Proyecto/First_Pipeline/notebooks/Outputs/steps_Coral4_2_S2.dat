@@ -1,0 +1,12 @@
+img_path ../../Fotos_prueba/Coral4_2_S2.JPG 
+dim_x_y 1280 1920 
+cut_proportion 0.040000 
+cut_y_0_final 0 4 
+dim_new_x_y 1178 1502 
+cut_otsu_thresholding 0.250000 
+Otsu_thresh_square_coral 0.387063 0.314543 
+square_cut 375 
+area_square_pixels 2337.000000 
+number_dilated_erode 6 
+area_coral_pixels 20290.000000 
+area_coral_cm2 8.000000 

@@ -1,17 +1,24 @@
-
-# coding: utf-8
+#!/usr/bin/python
 
 # #Coral Area Measurements
 # ##First Look
 # ###Sergio Daniel Hernandez Charpak
 # ###Jose Francisco Molano
 
+# Script creado para el analisis de las imagenes de corales tomadas por Nancy Ruiz
+# para el grupo BIOMMAR bajo la direccion de Susana Simancas en Uniandes
+# en el marco del proyecto del curso Imagenes y Vision dictado por Marcela Hernandez en el semestre 2016-10
+
+# Usage
+# python Coral_Area_Measurement.py input_image_path images_extention(ex: JPG) output_folder_path intermediate_images_option(yes:1 no:0)
+USAGE = "python Coral_Area_Measurement.py input_image_path images_extention(ex: JPG) output_folder_path intermediate_images_option(yes:1 no:0)"
+
+# ###Imports
 
 import pylab
 import numpy as np
 import matplotlib.pyplot as plt
-
-
+import sys
 
 from skimage.morphology import disk
 from skimage.filters import threshold_otsu, rank
@@ -19,443 +26,307 @@ from skimage.util import img_as_ubyte
 from skimage.measure import label
 from skimage import measure
 from skimage import morphology
+from skimage.color import rgb2gray
 
+# ###Functions
 
+def get_folder_name(folder_path):
+    folder_name_array = (folder_path.strip('/')).split('/')
+    return folder_name_array[len(folder_name_array)-1]
 
-inputfolder = '../../Fotos_prueba/'
+def umbralizar_otsu(imagen):
+    thresh = threshold_otsu(imagen)
+    binary = imagen < thresh
+    return binary, thresh
 
+def guardar_imagen(image, path):
+    fig = plt.figure(figsize = (10,10))
+    plt.gray()
+    plt.imshow(image)
+    plt.savefig(path)
+    plt.xlabel("y(pixels)")
+    plt.ylabel("x(pixels)")
+    #plt.show()
+    plt.close(fig)
 
-# This is a test on one of the images. We will make use of the glob library to analyze all the images
+#---------------------------------------------------------
+# Usage
 
-# In[23]:
+if(len(sys.argv)!=5):
+    print "Please use correctly"
+    print USAGE
+    sys.exit()
 
-input_image = 'rsz_img_6780.jpg'
-output_name = './measurements_intermediate_steps_'+input_image.strip('.jpg')+'.dat'
+input_image = sys.argv[1]
+images_extention = '.'+sys.argv[2]
+outputfolder = sys.argv[3]
+#If 1 is selected all the intermediate step images are saved
+#If 0 is selected only
+option_save_intermediate_images = int(sys.argv[4])
 
+image_name = get_folder_name(input_image).strip(images_extention)
 
-# In[24]:
+steps_filename = outputfolder + image_name+'_steps.dat'
 
-fileout = open(output_name, 'w')
+file_steps_out = open(steps_filename, 'w')
 
-
-# In[25]:
-
-image = pylab.imread(inputfolder+input_image)
-
-
-# In[26]:
-
-fileout.write("%s \n"%(inputfolder+input_image))
-
+image = pylab.imread(input_image)
+file_steps_out.write("%s %s \n"%("img_path", input_image))
 
 # <p>The image is an RGB image. We will transform it on a first basis to simplify the process.</p>
 # <p> We follow the example: http://scikit-image.org/docs/stable/auto_examples/color_exposure/plot_adapt_rgb.html#example-color-exposure-plot-adapt-rgb-py </p>
 
-# In[27]:
-
-from skimage.color import rgb2gray
 img = rgb2gray(image)
 
-
-# In[28]:
-
-#print (img.shape)
-
-
-# In[29]:
-
-#print (img)
-
-
-# In[14]:
-
-img_mean = np.mean(img)
-img_std = np.std(img)
-img_max = np.max(img)
-img_min = np.min(img)
-
-
-# In[30]:
-
-fileout.write("%f %f %f %f \n"%(img_mean, img_std, img_max, img_min))
-
-
-# In[15]:
-
-threshold = img_min + 2.0 *img_std
-
-
-# In[31]:
-
-fileout.write("%f \n"%(threshold))
-
-
-# In[32]:
-
-mask = img < threshold
-img_thresholded = np.zeros(img.shape)
-img_thresholded[mask] = 255
-
-
-# In[33]:
-
-#print (mask)
-
-
-# In[34]:
-
-fig, axes = plt.subplots(nrows=3, figsize=(7, 8))
-ax0, ax1, ax2 = axes
-plt.gray()
-
-ax0.imshow(image)
-ax0.set_title('Image RGB')
-
-ax1.imshow(img)
-ax1.set_title('Image grey')
-
-ax2.imshow(img_thresholded)
-ax2.set_title('Threshold with th = '+ str(threshold))
-
-for ax in axes:
-    ax.axis('off')
-plt.savefig("imgs_first_look.png",format = 'png')
-plt.show()
-
-
-# In[35]:
-
-fig = plt.figure(figsize = (10,10))
-plt.gray()
-imshow(img_thresholded)
-plt.savefig("img_man_umbr.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
-
-
-# In[36]:
-
-plt.close(fig)
-
+# ###Cortando la imagen
 
 # Le cortamos los bordes a la imagen
 
-# In[37]:
+n_x, n_y = img.shape
 
-n_x, n_y = img_thresholded.shape
+file_steps_out.write("%s %d %d \n"%("dim_x_y",n_x, n_y))
 
+cut_prop = 0.04
+cut_y_0 = 0.5
+cut_y_final = 4.0
 
-# In[38]:
+file_steps_out.write("%s %f \n"%("cut_proportion",cut_prop))
+file_steps_out.write("%s %d %d \n"%("cut_y_0_final",cut_y_0, cut_y_final))
 
-fileout.write("%d %d \n"%(n_x, n_y))
+n_colums_x = int(n_x*cut_prop)
+n_colums_y = int(n_y*cut_prop)
 
-
-# In[39]:
-
-cut_prop = 0.02
-
-
-# In[40]:
-
-fileout.write("%f \n"%(cut_prop))
-
-
-# In[41]:
-
-n_x_new = int(n_x - n_x*cut_prop)
-n_y_new = int(n_y - n_y*cut_prop)
+#Arrays of the column index to be deleted
+array_index_columns_x_0 = np.arange(n_colums_x)
+array_index_columns_y_0 = np.arange(n_colums_y + cut_y_0*n_colums_y)
+array_index_columns_x_final = np.linspace(n_x-n_colums_x,n_x-1, n_colums_x)
+array_index_columns_y_final = np.linspace(n_y-cut_y_final*n_colums_y,n_y-1, cut_y_final*n_colums_y)
 
 
-# In[42]:
-
-fileout.write("%d %d \n"%(n_x_new, n_y_new))
-
-
-# In[43]:
-
-img_thresholded_new = np.zeros((n_x_new,n_y_new))
+img_delete_x = np.delete(img,array_index_columns_x_final,0 )
+img_delete_x = np.delete(img_delete_x,array_index_columns_x_0,0 )
+img_delete_y = np.delete(img_delete_x,array_index_columns_y_final,1 )
+img_delete_y = np.delete(img_delete_y,array_index_columns_y_0,1 )
 
 
-# In[44]:
+if (option_save_intermediate_images==1):
+    guardar_imagen(img_delete_x, outputfolder+image_name+"_x_cut.png")
+
+if (option_save_intermediate_images==1):
+    guardar_imagen(img_delete_y, outputfolder+image_name+"_y_cut.png")
+
+img = img_delete_y
+
+n_x_new, n_y_new = img.shape
+
+file_steps_out.write("%s %d %d \n"%("dim_new_x_y",n_x_new, n_y_new))
+
+if (option_save_intermediate_images==1):
+    fig = plt.figure(figsize = (10,10))
+    bins=256
+    plt.title("Cut Histogram")
+    plt.xlabel("gray level")
+    plt.ylabel("#(pixels)")
+    plt.hist(img.ravel(), bins=bins, histtype='step', color='black')
+    #plt.show()
+    plt.savefig(outputfolder+image_name+"_histogram.png",format = 'png')
+    plt.close(fig)
+
+# ###Umbralization with Otsu
+
+
+cut_y_img_umbr = 0.25 #Va a umbralizar el 0.25 de la imagen independientemente que el 0.75
+n_y_cut = int(n_y_new*cut_y_img_umbr)
+
+file_steps_out.write("%s %f \n"%("cut_otsu_thresholding",cut_y_img_umbr))
+
+img_square = np.zeros((n_x_new, n_y_new))
+img_coral = np.zeros((n_x_new, n_y_new))
 
 for i in range (n_x_new):
     for j in range(n_y_new):
-        img_thresholded_new[i,j] = img_thresholded[int(n_x*cut_prop) + i, int(n_y*cut_prop) +j]
+        if(j<n_y_cut):
+            img_square[i,j] = img[i,j]
+        else:
+            img_coral[i,j] = img[i,j]
 
+img_square_binary, thresh_square = umbralizar_otsu(img_square)
+img_coral_binary, thresh_coral = umbralizar_otsu(img_coral)
 
-# In[45]:
+file_steps_out.write("%s %f %f \n"%("Otsu_thresh_square_coral", thresh_square, thresh_coral))
 
-fig = plt.figure(figsize = (10,10))
-plt.gray()
-imshow(img_thresholded_new)
-plt.savefig("img_man_umbr_cut.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
+if (option_save_intermediate_images==1):
+    guardar_imagen(img_square_binary, outputfolder+image_name+"_square_otsu.png")
 
+if (option_save_intermediate_images==1):
+    guardar_imagen(img_coral_binary, outputfolder+image_name+"_coral_otsu.png")
 
-# In[46]:
+img_thresholded = np.zeros((n_x_new, n_y_new))
+for i in range (n_x_new):
+    for j in range(n_y_new):
+        if(j<n_y_cut):
+            img_thresholded[i,j] = img_square_binary[i,j]
+        else:
+            img_thresholded[i,j] = img_coral_binary[i,j]
 
-plt.close(fig)
+if (option_save_intermediate_images==1):
+    fig, axes = plt.subplots(nrows=3, figsize=(14, 14))
+    ax0, ax1, ax2 = axes
+    plt.gray()
+    ax0.imshow(image)
+    ax0.set_title('Image RGB')
+    ax1.imshow(img)
+    ax1.set_title('Image grey')
+    ax2.imshow(img_thresholded)
+    ax2.set_title('Otsu Threshold with thresholds: \n square: '+ str(thresh_square) + '\n coral: '+ str(thresh_coral))
+    for ax in axes:
+        ax.axis('off')
+    plt.savefig(outputfolder+image_name+"_first_look.png",format = 'png')
+    #plt.show()
+    plt.close(fig)
 
+if (option_save_intermediate_images==1):
+    guardar_imagen(img_thresholded, outputfolder+image_name+"_thresholded.png")
 
 # ##Square Area
-
 # Now we get the area of the square
 
-# In[51]:
-
-threshold_up = int(n_y_new/4.0)
-
-
-# In[56]:
-
-fileout.write("%d \n"%(threshold_up))
-
-
-# In[53]:
+threshold_up = int(n_y_new*cut_y_img_umbr)
+file_steps_out.write("%s %d \n"%("square_cut", threshold_up))
 
 img_thresholded_up = np.zeros((n_x_new,n_y_new))
 
+for i in range (n_x_new):
+    for j in range(threshold_up):
+        img_thresholded_up[i,j] = img_thresholded[i,j]
 
-# In[54]:
+if (option_save_intermediate_images==1):
+    guardar_imagen(img_thresholded_up, outputfolder+image_name+"_thresholded_cut_up.png")
 
-for i in range (threshold_up):
-    for j in range(n_y_new):
-        img_thresholded_up[i,j] = img_thresholded_new[i,j]
+etiquetas_square, num = label(img_thresholded_up, connectivity=2, return_num=True)
 
+hist, bins_edges = np.histogram(etiquetas_square.ravel())
 
-# In[57]:
+etiquetas_square = morphology.remove_small_objects(etiquetas_square,np.sort(hist)[len(hist)-2] - 10)
 
-fig = plt.figure(figsize = (10,10))
-plt.gray()
-imshow(img_thresholded_up)
-plt.savefig("img_man_umbr_cut_up.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
+if (option_save_intermediate_images==1):
+    guardar_imagen(etiquetas_square, outputfolder+image_name+"_thresholded_cut_up_labels.png")
 
+hist, bins_edges = np.histogram(etiquetas_square.ravel())
 
-# In[58]:
+area_square = np.sort(hist)[len(hist)-2]
 
-etiquetas, num = label(img_thresholded_up, connectivity=1, return_num=True)
+file_steps_out.write("%s %f \n"%("area_square_pixels", area_square))
 
+etiquetas_square =(255/np.max(etiquetas_square))*etiquetas_square
 
-# In[60]:
+image_scale = (255/np.max(img_thresholded))*img_thresholded
 
-hist, bins_edges = np.histogram(etiquetas.ravel())
+image_scale= image_scale - etiquetas_square
 
-
-# In[67]:
-
-etiquetas = morphology.remove_small_objects(etiquetas,hist[len(hist)-1])
-
-
-# In[68]:
-
-fig = plt.figure(figsize = (10,10))
-plt.gray()
-imshow(etiquetas)
-#plt.savefig("img_man_umbr_cut_up.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
-
-
-# In[69]:
-
-hist, bins_edges = np.histogram(etiquetas.ravel())
-
-
-# In[71]:
-
-print (hist)
-
-
-# In[72]:
-
-area_square = hist[len(hist)-1]
-
-
-# In[73]:
-
-fileout.write("%f \n"%(area_square))
-
+if (option_save_intermediate_images==1):
+    guardar_imagen(image_scale, outputfolder+image_name+"_no_square.png")
 
 # ## Coral Area
-
 # We extract the connected components to get the coral area
 
-# In[74]:
+etiquetas, num = label(image_scale, connectivity=2, return_num=True)
 
-#blobs_labels = measure.label(img_thresholded_new, background=0)
-etiquetas, num = label(img_thresholded_new, connectivity=1, return_num=True)
+if (option_save_intermediate_images==1):
+    guardar_imagen(etiquetas, outputfolder+image_name+"_no_square_labels.png")
 
+# Guardamos solo el objeto mas grande luego del fondo
 
-# In[75]:
+if (option_save_intermediate_images==1):
+    etiquetas_scale = (255.0/np.max(etiquetas))*etiquetas
+    fig = plt.figure(figsize = (10,10))
+    bins=256
+    plt.title("Histogram Coral Labels")
+    plt.xlabel("gray level")
+    plt.ylabel("# pixels")
+    plt.hist(etiquetas_scale.ravel(), bins=bins, histtype='step', color='black')
+    plt.savefig(outputfolder+image_name+"_histogram_coral_labels.png",format = 'png')
+    #plt.show()
+    plt.close(fig)
 
-fig = plt.figure(figsize = (10,10))
-#plt.gray()
-imshow(etiquetas)
-#plt.savefig("img_man_umbr_cut.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
-
-
-# Guardamos solo el objeto más grande luego del fondo
-
-# In[76]:
-
-hist, bins = np.histogram(etiquetas)
-
-
-# In[77]:
-
-x_hist = np.zeros(len(hist))
-for i in range (len(x_hist)):
-    x_hist[i] = (bins[i] + bins[i+1])/2.0
-
-
-# In[102]:
-
-plt.plot(x_hist,np.log10(hist))
-plt.ylabel("$Log_{10}$ of # pixels")
-plt.xlabel("Component Number")
-#plt.xlim(1,len(hist))
-
-
-# In[82]:
-
+hist, bins = np.histogram(etiquetas.ravel())
 hist_sorted = np.sort(hist)
 
+threshold_rm_objects = int (hist_sorted[len(hist_sorted)-2] - hist_sorted[len(hist_sorted)-2]/5.0)
 
-# In[88]:
-
-threshold_rm_objects = hist_sorted[len(hist_sorted)-2]
-
-
-# In[92]:
-
-fileout.write("%f \n"%(threshold_rm_objects))
-
-
-# In[90]:
+file_steps_out.write("%s %f \n"%("thresh_delet_small_objects", threshold_rm_objects))
 
 c = morphology.remove_small_objects(etiquetas,threshold_rm_objects)
 
+if (option_save_intermediate_images==1):
+    c_scale = (255.0/np.max(c))*c
+    fig = plt.figure(figsize = (10,10))
+    bins=256
+    plt.title("Histogram Coral Labels \n after removing small objects")
+    plt.xlabel("gray level")
+    plt.ylabel("# pixels")
+    plt.hist(c_scale.ravel(), bins=bins, histtype='step', color='black')
+    plt.savefig(outputfolder+image_name+"_histogram_coral_labels_no_small_objects.png",format = 'png')
+    #plt.show()
+    plt.close(fig)
 
-# In[93]:
-
-fig = plt.figure(figsize = (10,10))
-#plt.gray()
-imshow(c)
-plt.savefig("img_coral_holes_cut.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
-
-
-# In[116]:
+if (option_save_intermediate_images==1):
+    guardar_imagen(c, outputfolder+image_name+"_coral_with_holes.png")
 
 n_dilation_erosion = 6
 
-
-# In[117]:
-
-fileout.write("%d \n"%(n_dilation_erosion))
-
-
-# In[118]:
+file_steps_out.write("%s %d \n"%("number_dilated_erode", n_dilation_erosion))
 
 d = c
 for i in range (n_dilation_erosion):
        d = morphology.dilation(d)
 
-
-# In[119]:
-
-fig = plt.figure(figsize = (10,10))
-#plt.gray()
-imshow(d)
-#plt.savefig("img_man_umbr_cut.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
-
-
-# In[120]:
+if (option_save_intermediate_images==1):
+    guardar_imagen(d, outputfolder+image_name+"_coral_dilatated.png")
 
 for i in range (n_dilation_erosion):
        d = morphology.erosion(d)
 
+if (option_save_intermediate_images==1):
+    guardar_imagen(d, outputfolder+image_name+"_coral_eroded.png")
 
-# In[82]:
+hist, bins = np.histogram(d.ravel())
 
-fig = plt.figure(figsize = (10,10))
-#plt.gray()
-imshow(d)
-#plt.savefig("img_man_umbr_cut.png",format = 'png')
-plt.xlabel("y(pixels)")
-plt.ylabel("x(pixels)")
-plt.show()
+threshold_rm_objects =  (np.sort(hist)[len(hist)-2]) - int((np.sort(hist)[len(hist)-2])/50.0)
 
+d = morphology.remove_small_objects(d,threshold_rm_objects)
 
-# In[121]:
+etiquetas_coral, num = label(d, connectivity=2, return_num=True)
 
-etiquetas, num = label(d, connectivity=1, return_num=True)
+hist, bins = np.histogram(etiquetas_coral.ravel())
 
+if (option_save_intermediate_images==1):
+    etiquetas_coral_scale = (255.0/np.max(etiquetas_coral))*etiquetas_coral
+    fig = plt.figure(figsize = (10,10))
+    bins=256
+    plt.title("Histogram Coral Labels \n after removing small objects \n and filling holes")
+    plt.xlabel("gray level")
+    plt.ylabel("# pixels")
+    plt.hist(etiquetas_coral_scale.ravel(), bins=bins, histtype='step', color='black')
+    plt.savefig(outputfolder+image_name+"_histogram_coral_labels_no_holes.png",format = 'png')
+    #plt.show()
+    plt.close(fig)
 
-# In[122]:
+area_coral_pixels = np.sort(hist)[len(hist)-2]
 
-print (num)
-print (etiquetas.shape)
-
-
-# In[123]:
-
-hist, bins = np.histogram(etiquetas.ravel())
-
-
-# In[128]:
-
-x_hist = np.zeros(len(hist))
-for i in range (len(x_hist)):
-    x_hist[i] = (bins[i] + bins[i+1])/2.0
-plt.scatter(x_hist,hist)
-plt.ylabel("$Log_{10}$ of # pixels")
-
-
-# In[130]:
-
-area_coral_pixels = (hist[len(hist)-1])
-
-
-# In[131]:
-
-fileout.write("%f \n"%(area_coral_pixels))
-
-
-# In[132]:
+file_steps_out.write("%s %f \n"%("area_coral_pixels", area_coral_pixels))
 
 area_coral_cm_2 = area_coral_pixels/area_square
 
+file_steps_out.write("%s %f \n"%("area_coral_cm2", area_coral_cm_2))
+file_steps_out.close()
 
-# In[133]:
-
-fileout.write("%f \n"%(area_coral_cm_2))
-
-
-# In[134]:
-
-fileout.close()
-
-
-# In[135]:
-
-output_name = './area_coral_cm2_'+input_image.strip('.jpg')+'.dat'
+output_name = outputfolder + image_name+'_area_coral_cm2.dat'
 fileout = open(output_name, 'w')
-fileout.write("%f \n"%(area_coral_cm_2))
+fileout.write("%s \t %f \n"%(image_name, area_coral_cm_2))
 fileout.close()
 
+etiquetas_coral = (255/np.max(etiquetas_coral))*etiquetas_coral
+final_image = etiquetas_square + etiquetas_coral
+
+guardar_imagen(final_image, outputfolder+image_name+"_final_image.png")

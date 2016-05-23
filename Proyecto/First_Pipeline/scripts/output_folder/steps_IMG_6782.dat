@@ -1,0 +1,12 @@
+img_path ../../Fotos_prueba/IMG_6782.JPG 
+dim_x_y 3456 5184 
+cut_proportion 0.040000 
+cut_y_0_final 0 4 
+dim_new_x_y 3180 4045 
+cut_otsu_thresholding 0.250000 
+Otsu_thresh_square_coral 0.284706 0.328978 
+square_cut 1011 
+area_square_pixels 21082.000000 
+number_dilated_erode 6 
+area_coral_pixels 94652.000000 
+area_coral_cm2 4.000000 
