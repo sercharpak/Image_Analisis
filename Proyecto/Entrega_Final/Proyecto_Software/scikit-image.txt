@@ -1,0 +1,13 @@
+Scikit-Image es una libreria de python analisis de imagenes libre.
+Las instrucciones de instalacion se encuentran en: http://scikit-image.org/download.html
+
+En Linux OS o OSX (Mac):
+Haciendo uso de pip o easy_install
+pip install -U scikit-image
+o
+easy_install -U scikit-image
+
+En Windows:
+Archivos de instalacion en: http://www.lfd.uci.edu/~gohlke/pythonlibs/#scikit-image 
+Luego instalar haciendo uso de pip, en la carpeta en donde se descargo el archivo ejecutar:
+python pip -m install archivo.whl

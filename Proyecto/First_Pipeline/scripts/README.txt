@@ -12,6 +12,10 @@ Script para el analisis individual de una imagen.
 Para ejecutar el script se debe seguir la siguiente guia.
 python Coral_Area_Measurement.py input_image_path images_extention(ex: JPG) output_folder_path intermediate_images_option(yes:1 no:0)
 --------
+Dependencias
+-------------
+numpy, matplotlib, pylab, sys, scikit-image
+--------
 Entrada
 imagen a analizar.
 La toma de la imagen debe ser tal que:
@@ -52,6 +56,10 @@ Script Coral_Area_Folder_Measurement
 Script para el analisis de las imagenes de una carpeta
 Para ejecutar el script se debe seguir la siguiente guia.
 python Coral_Area_Folder_Measurement.py input_folder_path images_extention(ex: JPG) output_folder_path
+--------
+Dependencias
+-------------
+numpy, matplotlib, pylab, sys, glob, scikit-image
 --------
 Entrada
 carpeta con las imagenes a analizar.

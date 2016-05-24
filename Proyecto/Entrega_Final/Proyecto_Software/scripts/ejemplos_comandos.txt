@@ -1,0 +1,8 @@
+#Analisis de carpeta completa
+python Coral_Area_Folder_Measurement.py ../imagenes_prueba/ JPG ../resultados_prueba/resultado_carpeta/
+#--------------
+#Analisis de imagen individual mostrando las imagenes intermediarias en el proceso
+python Coral_Area_Measurement.py ../imagenes_prueba/Coral_3_S3.JPG JPG ../resultados_prueba/resultado_individual/ 1
+#--------------
+#Analisis de imagen individual sin mostrar las imagenes intermediarias en el proceso
+python Coral_Area_Measurement.py ../imagenes_prueba/Coral_3_S3.JPG JPG ../resultados_prueba/resultado_individual/ 0
